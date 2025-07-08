@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Social Media Strategy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&display=swap');
+
+        /* Custom Fonts */
+        @font-face {
+            font-family: 'Alta';
+            src: url('assets/fonts/alta/Alta_light.otf') format('opentype');
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Alta';
+            src: url('assets/fonts/alta/Alta_regular.otf') format('opentype');
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Cotoris';
+            src: url('assets/fonts/cotoris/cotoris.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+
+
+        .font-cotoris {
+            font-family: 'Cotoris', cursive;
+        }
+
+        .font-noto {
+            font-family: 'Noto Serif Display', serif;
+        }
+
+        .font-montserrat {
+            font-family: 'Montserrat', serif;
+        }
+
+        .font-alta {
+            font-family: 'Alta', sans-serif;
+        }
+
+        .bg-gradient-custom {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+
+        .text-shadow {
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .letter-spacing-wide {
+            letter-spacing: 0.2em;
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-pattern {
+            background-image:
+                linear-gradient(135deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%),
+                linear-gradient(225deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%),
+                linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%),
+                linear-gradient(315deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%);
+            background-size: 20px 20px;
+            background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+        }
+
+        .polaroid {
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border-radius: 4px;
+            border: 1px solid #f0f0f0;
+        }
+
+        .polaroid:hover {
+            transform: scale(1.02) rotate(0deg) !important;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15), 0 15px 35px rgba(0, 0, 0, 0.1);
+            z-index: 50 !important;
+        }
+
+        .hero-background {
+            background-image: url('./assets/images/94b4ef1f208164cd46a87fd1ca540a62.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-custom hero-pattern min-h-screen overflow-x-hidden">
+    <!-- Hero Section -->
+    <main class="hero-background relative z-10 flex items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto text-center animate-fade-in">
+            <!-- Portfolio Title -->
+            <h1
+                class="text-[110px] text-center mx-auto text-[#c09569] letter-spacing-wide leading-none text-shadow font-alta">
+                PORTFOLIO
+            </h1>
+
+            <!-- Subtitle -->
+            <p class="text-[17.8px] text-[#c09569] font-cotoris italic leading-relaxed mx-auto">
+                helping brands grow and connect with their public through strategic social media content
+            </p>
+        </div>
+    </main>
+
+    <!-- About Me Section -->
+    <section id="about" class="relative z-10 py-20 bg-[#f4f5f0] bg-opacity-60">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid p-10 lg:grid-cols-3 gap-12 items-center">
+                <!-- Image -->
+                <div class="relative h-full">
+                    <img src="./assets/images/f41a6aaf28b3a22804c2fbef651599b0.jpg"
+                        alt="Professional woman in business attire"
+                        class="w-full h-auto rounded-xl object-cover object-top" style="max-height: 400px;" />
+                </div>
+
+                <!-- Text Content -->
+                <div
+                    class="bg-white border border-[#c09569] bg-opacity-80 p-8 sm:p-12 rounded-2xl col-span-2 lg:order-first">
+                    <h2
+                        class="text-4xl sm:text-5xl lg:text-6xl text-[#d4cfb1] letter-spacing-wide font-alta text-center">
+                        ABOUT ME
+                    </h2>
+
+                    <div class="space-y-6 text-[#c09569] font-cotoris text-lg leading-relaxed">
+                        <p>
+                            I am a communication and branding professional with a degree in Marketing and over 4 years
+                            of experience with most of my background in food service. I create and implement strategies
+                            to build strong visual and verbal brand identities.
+                        </p>
+
+                        <p>
+                            I have worked with social media, influencers, and PR, always driven by my passion for
+                            branding and social media.
+                        </p>
+
+                        <p>
+                            One of the biggest accounts I have managed was <span
+                                class="text-amber-600 font-medium">@Ofner</span> (~180k followers).
+                        </p>
+
+                        <p>
+                            I support brands by building a strong digital presence, allowing businesses to stay focused
+                            on their core mission.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Management Section -->
+    <section id="services" class="relative z-10 py-20 bg-[#ffffff]">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+                <!-- Left side - Polaroid Images -->
+                <div class="relative flex justify-center lg:justify-start">
+                    <div class="grid grid-cols-2 gap-8 max-w-lg">
+                        <!-- Polaroid 1 - Top Left -->
+                        <div
+                            class="polaroid bg-white p-3 transform -rotate-3 shadow-xl hover:shadow-2xl transition-all duration-300 hover:z-50 relative z-40">
+                            <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                                alt="Social media workspace" class="w-full h-40 object-cover rounded-sm" />
+                            <div class="mt-3 text-center text-sm text-gray-600 font-handwriting">
+                                content creation
+                            </div>
+                        </div>
+
+                        <!-- Polaroid 2 - Top Right -->
+                        <div
+                            class="polaroid bg-white p-3 transform rotate-2 shadow-xl hover:shadow-2xl transition-all duration-300 hover:z-50 relative z-30 -mt-6">
+                            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                                alt="Business planning" class="w-full h-40 object-cover rounded-sm" />
+                            <div class="mt-3 text-center text-sm text-gray-600 font-handwriting">
+                                strategy planning
+                            </div>
+                        </div>
+
+                        <!-- Polaroid 3 - Bottom Left -->
+                        <div
+                            class="polaroid bg-white p-3 transform rotate-1 shadow-xl hover:shadow-2xl transition-all duration-300 hover:z-50 relative z-20 -mt-8 ml-4">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                                alt="Analytics dashboard" class="w-full h-40 object-cover rounded-sm" />
+                            <div class="mt-3 text-center text-sm text-gray-600 font-handwriting">
+                                analytics & growth
+                            </div>
+                        </div>
+
+                        <!-- Polaroid 4 - Bottom Right -->
+                        <div
+                            class="polaroid bg-white p-3 transform -rotate-2 shadow-xl hover:shadow-2xl transition-all duration-300 hover:z-50 relative z-10 -mt-12 -ml-2">
+                            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                                alt="Creative workspace" class="w-full h-40 object-cover rounded-sm" />
+                            <div class="mt-3 text-center text-sm text-gray-600 font-handwriting">
+                                brand development
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right side - Text Content -->
+                <div class="space-y-8">
+                    <div>
+                        <h2
+                            class="text-5xl sm:text-6xl lg:text-7xl font-light text-[#c8b896] mb-4 leading-tight font-noto">
+                            social<br>
+                            media<br>
+                            management
+                        </h2>
+                    </div>
+
+                    <div class="font-montserrat space-y-6">
+                        <p class="text-lg text-[#8b7355] leading-relaxed font-light">
+                            Complete social media management for brands that want to grow with purpose and consistency.
+                        </p>
+
+                        <p class="text-lg text-[#8b7355] leading-relaxed font-light">
+                            From strategy to content creation, I take care of everything your brand needs to show up
+                            online with confidence — <span class="font-medium">building community</span>, <span
+                                class="font-medium">increasing engagement</span>, and <span class="font-medium">turning
+                                followers into loyal customers</span>.
+                        </p>
+
+                        <p class="text-lg text-[#8b7355] leading-relaxed font-light">
+                            Ideal for businesses in the food and service industry looking to strengthen their digital
+                            presence while focusing on what they do best.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands Section -->
+    <section class="relative z-10 py-20 bg-[#fef9ff]">
+        <div class="max-w-7xl max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-12 items-start">
+                <!-- Instagram Profiles Grid -->
+                <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <!-- Section Title -->
+                    <div class="flex justify-center flex-col lg:col-span-1">
+                        <h2 class="text-[100px] text-[#d4cfb1] leading-none font-alta">
+                            BRANDS
+                        </h2>
+                        <span class="text-[#c09569] font-cotoris text-[50px]">I have worked
+                            with</span>
+                    </div>
+
+                    <!-- Marena Cucina -->
+                    <div
+                        class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                        <div class="flex items-center space-x-4 mb-4">
+                            <div class="w-16 h-16 rounded-full bg-gradient-to-br from-pink-500 to-yellow-500 p-1">
+                                <div class="w-full h-full rounded-full bg-white flex items-center justify-center">
+                                    <span class="text-lg font-bold text-gray-800">M</span>
+                                </div>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-semibold text-gray-800">marenacucina</h3>
+                                <p class="text-sm text-gray-500">Following</p>
+                            </div>
+                            <button class="text-blue-500 text-sm font-medium">Message</button>
+                        </div>
+                        <div class="text-center mb-4">
+                            <div class="flex justify-center space-x-8 text-sm">
+                                <div><span class="font-semibold">113</span> posts</div>
+                                <div><span class="font-semibold">20.6K</span> followers</div>
+                                <div><span class="font-semibold">33</span> following</div>
+                            </div>
+                        </div>
+                        <div class="text-sm text-gray-700">
+                            <p class="font-semibold">Marena Cucina</p>
+                            <p>Italian Restaurant</p>
+                            <p>Tutto fresco & fatto in casa!</p>
+                            <p>Guia MICHELIN 2025 @michelinguide</p>
+                        </div>
+                    </div>
+
+                    <!-- Restaurant Arabia -->
+                    <div
+                        class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                        <div class="flex items-center space-x-4 mb-4">
+                            <div class="w-16 h-16 rounded-full bg-gradient-to-br from-red-600 to-yellow-500 p-1">
+                                <div class="w-full h-full rounded-full bg-red-700 flex items-center justify-center">
+                                    <span class="text-lg font-bold text-white">ع</span>
+                                </div>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-semibold text-gray-800">restaurantearabia</h3>
+                                <p class="text-sm text-gray-500">Following</p>
+                            </div>
+                            <button class="text-blue-500 text-sm font-medium">Message</button>
+                        </div>
+                        <div class="text-center mb-4">
+                            <div class="flex justify-center space-x-8 text-sm">
+                                <div><span class="font-semibold">1,613</span> posts</div>
+                                <div><span class="font-semibold">56.8K</span> followers</div>
+                                <div><span class="font-semibold">386</span> following</div>
+                            </div>
+                        </div>
+                        <div class="text-sm text-gray-700">
+                            <p class="font-semibold">Restaurante Arabia</p>
+                            <p>Restaurant</p>
+                            <p>Cozinha de cór</p>
+                            <p>Culinária árabe, feita com excelência desde 1987.</p>
+                        </div>
+                    </div>
+
+                    <!-- AMA Time -->
+                    <div
+                        class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                        <div class="flex items-center space-x-4 mb-4">
+                            <div class="w-16 h-16 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 p-1">
+                                <div class="w-full h-16 rounded-full bg-gray-600 flex items-center justify-center">
+                                    <span class="text-sm font-bold text-white">AMA</span>
+                                </div>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-semibold text-gray-800">amatime_br</h3>
+                                <p class="text-sm text-gray-500">Following</p>
+                            </div>
+                            <button class="text-blue-500 text-sm font-medium">Message</button>
+                        </div>
+                        <div class="text-center mb-4">
+                            <div class="flex justify-center space-x-8 text-sm">
+                                <div><span class="font-semibold">83</span> posts</div>
+                                <div><span class="font-semibold">1,380</span> followers</div>
+                                <div><span class="font-semibold">312</span> following</div>
+                            </div>
+                        </div>
+                        <div class="text-sm text-gray-700">
+                            <p class="font-semibold">AMA Time Brasil</p>
+                            <p>🍃 Livres de açúcar, frutas 100% orgânicas</p>
+                            <p>🌿 Sem conservantes, açúcar e concentrados</p>
+                            <p>🌱 Amigáveis com o meio...</p>
+                        </div>
+                    </div>
+
+                    <!-- PAO Padaria -->
+                    <div
+                        class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                        <div class="flex items-center space-x-4 mb-4">
+                            <div class="w-16 h-16 rounded-full bg-gradient-to-br from-yellow-400 to-pink-500 p-1">
+                                <div class="w-full h-full rounded-full bg-black flex items-center justify-center">
+                                    <span class="text-lg font-bold text-white">PAO</span>
+                                </div>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-semibold text-gray-800">padariaorganica</h3>
+                                <p class="text-sm text-gray-500">Following</p>
+                            </div>
+                            <button class="text-blue-500 text-sm font-medium">Message</button>
+                        </div>
+                        <div class="text-center mb-4">
+                            <div class="flex justify-center space-x-8 text-sm">
+                                <div><span class="font-semibold">2,050</span> posts</div>
+                                <div><span class="font-semibold">74K</span> followers</div>
+                                <div><span class="font-semibold">1,051</span> following</div>
+                            </div>
+                        </div>
+                        <div class="text-sm text-gray-700">
+                            <p class="font-semibold">PAO - Padaria Orgânica</p>
+                            <p>Restaurant</p>
+                            <p>Desde 2007, produzindo comida artesanal com ingredientes orgânicos</p>
+                            <p>Cheia de carinho.</p>
+                        </div>
+                    </div>
+
+                    <!-- Ofner -->
+                    <div
+                        class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                        <div class="flex items-center space-x-4 mb-4">
+                            <div class="w-16 h-16 rounded-full bg-gradient-to-br from-orange-500 to-red-500 p-1">
+                                <div class="w-full h-full rounded-full bg-orange-600 flex items-center justify-center">
+                                    <span class="text-lg font-bold text-white italic">O</span>
+                                </div>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-semibold text-gray-800">ofner</h3>
+                                <p class="text-sm text-gray-500">Following</p>
+                            </div>
+                            <button class="text-blue-500 text-sm font-medium">Message</button>
+                        </div>
+                        <div class="text-center mb-4">
+                            <div class="flex justify-center space-x-8 text-sm">
+                                <div><span class="font-semibold">2,511</span> posts</div>
+                                <div><span class="font-semibold">186K</span> followers</div>
+                                <div><span class="font-semibold">81</span> following</div>
+                            </div>
+                        </div>
+                        <div class="text-sm text-gray-700">
+                            <p class="font-semibold">Ofner</p>
+                            <p>Product/service</p>
+                            <p>Recheado da vida com boas histórias</p>
+                            <p>🔗 linktr.ee/LojasOfnerOficial</p>
+                        </div>
+                    </div>
+
+                    <!-- Djapa Moema -->
+                    <div
+                        class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                        <div class="flex items-center space-x-4 mb-4">
+                            <div class="w-16 h-16 rounded-full bg-gradient-to-br from-yellow-400 to-orange-500 p-1">
+                                <div class="w-full h-full rounded-full bg-black flex items-center justify-center">
+                                    <span class="text-xs font-bold text-yellow-400">DJAPA</span>
+                                </div>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-semibold text-gray-800">djapa_moema_oficial</h3>
+                                <p class="text-sm text-gray-500">Follow</p>
+                            </div>
+                            <button class="bg-blue-500 text-white px-4 py-1 rounded text-sm font-medium">Follow</button>
+                        </div>
+                        <div class="text-center mb-4">
+                            <div class="flex justify-center space-x-8 text-sm">
+                                <div><span class="font-semibold">1,455</span> posts</div>
+                                <div><span class="font-semibold">82.3K</span> followers</div>
+                                <div><span class="font-semibold">25</span> following</div>
+                            </div>
+                        </div>
+                        <div class="text-sm text-gray-700">
+                            <p class="font-semibold">Djapa Moema</p>
+                            <p>Restaurant</p>
+                            <p>🍜 O melhor rodízio japonês de São Paulo.</p>
+                            <p>🏆 Certificado de excelência pelo TripAdvisor.</p>
+                            <p>🚚 Delivery pelo iFood</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="text-center mt-16">
+                <p class="text-[34px] text-[#a2c4e0] mb-8 font-light italic font-cotoris tracking-[10px]">
+                    click on image to see on Instagram
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Work Section 1 -->
+    <section class="relative z-10 pb-20 pt-40 bg-[#f4f5f0] overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row items-center lg:items-start gap-12">
+
+                <!-- Vertical Title -->
+                <div class="flex-shrink-0 lg:w-32 flex items-center justify-center self-stretch">
+                    <h2
+                        class="text-5xl sm:text-6xl font-light text-[#d4cfb1] tracking-widest [writing-mode:vertical-rl] transform rotate-180 whitespace-nowrap">
+                        CLIENT WORK
+                    </h2>
+                </div>
+
+                <!-- Main Content -->
+                <div class="flex-grow">
+                    <div class="grid grid-cols-2 md:grid-cols-5 gap-6">
+
+                        <!-- Video Item 1 -->
+                        <div class="relative group cursor-pointer">
+                            <svg class="absolute -top-20 -right-10 transform z-[100]" width="100" height="100"
+                                viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="50" cy="50" r="40" fill="transparent" />
+                                <text fill="#c8b896" font-size="8" font-family="Arial">
+                                    <textPath href="#circle1" startOffset="0" text-anchor="middle">filming · filming ·
+                                        filming · filming · filming · filming · filming · filming · filming · filming ·
+                                        filming · filming · filming · filming · filming · filming ·</textPath>
+                                </text>
+                                <path id="circle1" d="M50,10 a40,40 0 1,1 -0.1,0" fill="transparent" />
+                            </svg>
+                            <div
+                                class="aspect-[9/16] bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                                <img src="./assets/images/1f72e1f311088beb01b3d0d10482fbcc.png"
+                                    alt="Ofner advent calendar" class="w-full h-full object-cover" />
+                                <div
+                                    class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Video Item 2 -->
+                        <div class="relative group cursor-pointer">
+                            <svg class="absolute -top-20 -right-10 transform z-[100]" width="100" height="100"
+                                viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="50" cy="50" r="40" fill="transparent" />
+                                <text fill="#c8b896" font-size="8" font-family="Arial">
+                                    <textPath href="#circle2" startOffset="0" text-anchor="middle">content creation ·
+                                        content creation · content creation · content creation · content creation ·
+                                        content creation · content creation · content creation · content creation ·
+                                        content creation · content creation · content creation ·</textPath>
+                                </text>
+                                <path id="circle2" d="M50,10 a40,40 0 1,1 -0.1,0" fill="transparent" />
+                            </svg>
+                            <div
+                                class="aspect-[9/16] bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                                <img src="./assets/images/4cc9e939b91c407dac5395debf412d77.png" alt="Ofner ice cream"
+                                    class="w-full h-full object-cover" />
+                                <div
+                                    class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Video Item 3 -->
+                        <div class="relative group cursor-pointer">
+                            <svg class="absolute -top-20 -right-10 transform z-[100]" width="100" height="100"
+                                viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="50" cy="50" r="40" fill="transparent" />
+                                <text fill="#c8b896" font-size="8" font-family="Arial">
+                                    <textPath href="#circle3" startOffset="0" text-anchor="middle">editing · editing ·
+                                        editing · editing · editing · editing · editing · editing · editing · editing ·
+                                        editing · editing · editing · editing · editing · editing ·</textPath>
+                                </text>
+                                <path id="circle3" d="M50,10 a40,40 0 1,1 -0.1,0" fill="transparent" />
+                            </svg>
+                            <div
+                                class="aspect-[9/16] bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                                <img src="./assets/images/094461e14dcd655ee44627c5ae219737.png" alt="Colorful sprinkles"
+                                    class="w-full h-full object-cover" />
+                                <div
+                                    class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Video Item 4 -->
+                        <div class="relative group cursor-pointer">
+                            <svg class="absolute -top-20 -right-10 transform z-[100]" width="100" height="100"
+                                viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="50" cy="50" r="40" fill="transparent" />
+                                <text fill="#c8b896" font-size="8" font-family="Arial">
+                                    <textPath href="#circle4" startOffset="0" text-anchor="middle">content creation ·
+                                        content creation · content creation · content creation · content creation ·
+                                        content creation · content creation · content creation · content creation ·
+                                        content creation · content creation · content creation ·</textPath>
+                                </text>
+                                <path id="circle4" d="M50,10 a40,40 0 1,1 -0.1,0" fill="transparent" />
+                            </svg>
+                            <div
+                                class="aspect-[9/16] bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                                <img src="./assets/images/f441a0e451bc01446a8fe71dd40c1ae3.png" alt="Ofner products"
+                                    class="w-full h-full object-cover" />
+                                <div
+                                    class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Bottom Text -->
+                        <div class="flex justify-between items-start mt-[50%]">
+                            <div class="text-right relative">
+                                <p class="text-[15px] text-[#c8b896] text-left font-light italic leading-relaxed">
+                                    Videos created from scratch<br>
+                                    — scripting, filming, editing,<br>
+                                    posting, and captions.
+                                </p>
+                                <img src="./assets/images/e86a6961-d682-4d18-ab92-d8f927000cb7.png"
+                                    class="h-[40px] ml-6 mt-6" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bottom Text -->
+                    <div class="flex justify-between items-end mt-8">
+                        <div>
+                            <p class="text-[34px] text-[#a2c4e0] mb-8 font-light italic font-cotoris tracking-[10px]">
+                                click on image to watch on Instagram
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Work Section 2 -->
+    <section class="relative z-10 py-20 bg-[#f4f5f0] overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row items-center lg:items-start gap-12">
+
+                <!-- Vertical Title -->
+                <div class="flex-shrink-0 lg:w-32 flex items-center justify-center self-stretch">
+                    <h2
+                        class="text-5xl sm:text-6xl font-light text-[#d4cfb1] tracking-widest [writing-mode:vertical-rl] transform rotate-180 whitespace-nowrap">
+                        CLIENT WORK
+                    </h2>
+                </div>
+
+                <!-- Main Content -->
+                <div class="flex-grow">
+                    <div class="grid grid-cols-2 md:grid-cols-5 gap-6">
+
+                        <!-- Video Item 1 -->
+                        <div class="relative group cursor-pointer">
+                            <svg class="absolute -top-20 -right-10 transform z-[100]" width="100" height="100"
+                                viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="50" cy="50" r="40" fill="transparent" />
+                                <text fill="#c8b896" font-size="8" font-family="Arial">
+                                    <textPath href="#circle1" startOffset="0" text-anchor="middle">filming · filming ·
+                                        filming · filming · filming · filming · filming · filming · filming · filming ·
+                                        filming · filming · filming · filming · filming · filming ·</textPath>
+                                </text>
+                                <path id="circle1" d="M50,10 a40,40 0 1,1 -0.1,0" fill="transparent" />
+                            </svg>
+                            <div
+                                class="aspect-[9/16] bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                                <img src="./assets/images/9beba105853a3714bfa79e5d39702e59.png"
+                                    alt="Ofner advent calendar" class="w-full h-full object-cover" />
+                                <div
+                                    class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Video Item 2 -->
+                        <div class="relative group cursor-pointer">
+                            <svg class="absolute -top-20 -right-10 transform z-[100]" width="100" height="100"
+                                viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="50" cy="50" r="40" fill="transparent" />
+                                <text fill="#c8b896" font-size="8" font-family="Arial">
+                                    <textPath href="#circle2" startOffset="0" text-anchor="middle">content creation ·
+                                        content creation · content creation · content creation · content creation ·
+                                        content creation · content creation · content creation · content creation ·
+                                        content creation · content creation · content creation ·</textPath>
+                                </text>
+                                <path id="circle2" d="M50,10 a40,40 0 1,1 -0.1,0" fill="transparent" />
+                            </svg>
+                            <div
+                                class="aspect-[9/16] bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                                <img src="./assets/images/950ec05a8b42c41829fa5cd4bcbaaf4d.png" alt="Ofner ice cream"
+                                    class="w-full h-full object-cover" />
+                                <div
+                                    class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Video Item 3 -->
+                        <div class="relative group cursor-pointer">
+                            <svg class="absolute -top-20 -right-10 transform z-[100]" width="100" height="100"
+                                viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="50" cy="50" r="40" fill="transparent" />
+                                <text fill="#c8b896" font-size="8" font-family="Arial">
+                                    <textPath href="#circle4" startOffset="0" text-anchor="middle">content creation ·
+                                        content creation · content creation · content creation · content creation ·
+                                        content creation · content creation · content creation · content creation ·
+                                        content creation · content creation · content creation ·</textPath>
+                                </text>
+                                <path id="circle4" d="M50,10 a40,40 0 1,1 -0.1,0" fill="transparent" />
+                            </svg>
+                            <div
+                                class="aspect-[9/16] bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                                <img src="./assets/images/f1d2e9861052b591576c850e7e125f44.png" alt="Ofner products"
+                                    class="w-full h-full object-cover" />
+                                <div
+                                    class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Bottom Text -->
+                        <div class="flex justify-between items-start mt-[50%]">
+                            <div class="text-right relative">
+                                <p class="text-[15px] text-[#c8b896] text-left font-light italic leading-relaxed">
+                                    Videos created from scratch<br>
+                                    — scripting, filming, editing,<br>
+                                    posting, and captions.
+                                </p>
+                                <img src="./assets/images/e86a6961-d682-4d18-ab92-d8f927000cb7.png"
+                                    class="h-[40px] ml-6 mt-6" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bottom Text -->
+                    <div class="flex justify-between items-end mt-8">
+                        <div>
+                            <p class="text-[34px] text-[#a2c4e0] mb-8 font-light italic font-cotoris tracking-[10px]">
+                                click on image to watch on Instagram
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Influencers Section -->
+    <section class="relative z-10 py-20 bg-[#f5f1e6] overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <!-- Section Title -->
+            <div class="flex justify-center flex-col lg:col-span-1 mb-[100px]">
+                <h2
+                    class="text-5xl sm:text-6xl lg:text-7xl font-light text-[#a2c4e0] leadng-tight letter-spacing-wide font-alta">
+                    Influencers
+                </h2>
+                <span class="text-[#e8d2b8] text-4xl sm:text-5xl lg:text-6xl font-cotoris">I have worked with</span>
+            </div>
+
+            <div class="flex flex-col lg:flex-row items-center lg:items-start gap-12">
+                <!-- Main Content -->
+                <div class="flex-grow">
+                    <div class="grid grid-cols-2 md:grid-cols-5 gap-6"><!-- Bottom Text -->
+                        <div class="flex justify-between items-start mt-[50%]">
+                            <div class="text-left relative">
+                                <p class="text-lg text-[#c8b896] font-light italic leading-relaxed">
+                                    Influencer campaigns<br>
+                                    managed end-to-end —<br>
+                                    sourcing, briefing, approvals,<br>
+                                    posting
+                                </p>
+                                <img src="./assets/images/2253489e-24d7-483a-8bcb-95b3b8f1770b.png"
+                                    class="h-[40px] ml-auto" alt="">
+                            </div>
+                        </div>
+
+                        <!-- Video Item 1 -->
+                        <div class="relative group cursor-pointer">
+                            <svg class="absolute -top-20 -right-10 transform z-[100]" width="100" height="100"
+                                viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="50" cy="50" r="40" fill="transparent" />
+                                <text fill="#c8b896" font-size="8" font-family="Arial">
+                                    <textPath href="#circle1" startOffset="0" text-anchor="middle">filming · filming ·
+                                        filming · filming · filming · filming · filming · filming · filming · filming ·
+                                        filming · filming · filming · filming · filming · filming ·</textPath>
+                                </text>
+                                <path id="circle1" d="M50,10 a40,40 0 1,1 -0.1,0" fill="transparent" />
+                            </svg>
+                            <div
+                                class="aspect-[9/16] bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                                <img src="./assets/images/86fa824dd46b048c8252cbbb59a1a2c1.png"
+                                    alt="Ofner advent calendar" class="w-full h-full object-cover" />
+                                <div
+                                    class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Video Item 2 -->
+                        <div class="relative group cursor-pointer">
+                            <svg class="absolute -top-20 -right-10 transform z-[100]" width="100" height="100"
+                                viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="50" cy="50" r="40" fill="transparent" />
+                                <text fill="#c8b896" font-size="8" font-family="Arial">
+                                    <textPath href="#circle2" startOffset="0" text-anchor="middle">content creation ·
+                                        content creation · content creation · content creation · content creation ·
+                                        content creation · content creation · content creation · content creation ·
+                                        content creation · content creation · content creation ·</textPath>
+                                </text>
+                                <path id="circle2" d="M50,10 a40,40 0 1,1 -0.1,0" fill="transparent" />
+                            </svg>
+                            <div
+                                class="aspect-[9/16] bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                                <img src="./assets/images/10a646973deb578e7dc471321a050acb.png" alt="Ofner ice cream"
+                                    class="w-full h-full object-cover" />
+                                <div
+                                    class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Video Item 3 -->
+                        <div class="relative group cursor-pointer">
+                            <svg class="absolute -top-20 -right-10 transform z-[100]" width="100" height="100"
+                                viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="50" cy="50" r="40" fill="transparent" />
+                                <text fill="#c8b896" font-size="8" font-family="Arial">
+                                    <textPath href="#circle3" startOffset="0" text-anchor="middle">editing · editing ·
+                                        editing · editing · editing · editing · editing · editing · editing · editing ·
+                                        editing · editing · editing · editing · editing · editing ·</textPath>
+                                </text>
+                                <path id="circle3" d="M50,10 a40,40 0 1,1 -0.1,0" fill="transparent" />
+                            </svg>
+                            <div
+                                class="aspect-[9/16] bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                                <img src="./assets/images/f032824209a53f22cb60db8bd66f0671.png" alt="Colorful sprinkles"
+                                    class="w-full h-full object-cover" />
+                                <div
+                                    class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Video Item 4 -->
+                        <div class="relative group cursor-pointer">
+                            <svg class="absolute -top-20 -right-10 transform z-[100]" width="100" height="100"
+                                viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="50" cy="50" r="40" fill="transparent" />
+                                <text fill="#c8b896" font-size="8" font-family="Arial">
+                                    <textPath href="#circle4" startOffset="0" text-anchor="middle">content creation ·
+                                        content creation · content creation · content creation · content creation ·
+                                        content creation · content creation · content creation · content creation ·
+                                        content creation · content creation · content creation ·</textPath>
+                                </text>
+                                <path id="circle4" d="M50,10 a40,40 0 1,1 -0.1,0" fill="transparent" />
+                            </svg>
+                            <div
+                                class="aspect-[9/16] bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                                <img src="./assets/images/4660dd3bc30fdf3b138a52b639155504.png" alt="Ofner products"
+                                    class="w-full h-full object-cover" />
+                                <div
+                                    class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bottom Text -->
+                    <div class="flex justify-center items-end mt-8">
+                        <div>
+                            <p class="text-[34px] text-[#d4cfb1] mb-8 font-light italic font-cotoris tracking-[10px]">
+                                click on image to watch on Instagram
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(30px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        });
+
+        // Form submission
+        document.querySelector('form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
+            this.reset();
+        });
+    </script>
+</body>
+
+</html>
