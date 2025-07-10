@@ -3,11 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Social Media Strategy</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
         /* Custom Fonts */
         @font-face {
@@ -46,6 +46,14 @@
 
         .font-alta {
             font-family: 'Alta', sans-serif;
+        }
+
+        .font-playfair {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .font-public-sans {
+            font-family: 'Public Sans', sans-serif;
         }
 
         .bg-gradient-custom {
@@ -105,6 +113,178 @@
             background-size: cover;
             background-position: center;
         }
+
+        /* Mobile Responsive Styles */
+        @media (max-width: 768px) {
+            .hero-pattern {
+                background-size: 10px 10px;
+                background-position: 0 0, 0 5px, 5px -5px, -5px 0px;
+            }
+
+            .text-mobile-portfolio {
+                font-size: clamp(3rem, 15vw, 6rem) !important;
+                letter-spacing: 0.1em !important;
+            }
+
+            .text-mobile-subtitle {
+                font-size: clamp(0.9rem, 4vw, 1.1rem) !important;
+                padding: 0 1rem;
+            }
+
+            .mobile-about-grid {
+                grid-template-columns: 1fr !important;
+                gap: 2rem !important;
+            }
+
+            .mobile-about-text {
+                order: 1 !important;
+                padding: 1.5rem !important;
+            }
+
+            .mobile-about-image {
+                order: 2 !important;
+                max-height: 300px !important;
+            }
+
+            .mobile-services-grid {
+                grid-template-columns: 1fr !important;
+                gap: 3rem !important;
+            }
+
+            .mobile-polaroid-grid {
+                grid-template-columns: 1fr 1fr !important;
+                gap: 1rem !important;
+                max-width: 100% !important;
+            }
+
+            .mobile-polaroid {
+                transform: rotate(0deg) !important;
+                margin-top: 0 !important;
+                margin-left: 0 !important;
+            }
+
+            .mobile-polaroid:nth-child(2) {
+                transform: rotate(2deg) !important;
+                margin-top: -0.5rem !important;
+            }
+
+            .mobile-polaroid:nth-child(3) {
+                transform: rotate(-1deg) !important;
+            }
+
+            .mobile-polaroid:nth-child(4) {
+                transform: rotate(1deg) !important;
+                margin-top: -0.5rem !important;
+            }
+
+            .mobile-brands-grid {
+                grid-template-columns: 1fr !important;
+                gap: 1.5rem !important;
+            }
+
+            .mobile-brand-card {
+                padding: 1rem !important;
+            }
+
+            .mobile-brand-avatar {
+                width: 80px !important;
+                height: 80px !important;
+            }
+
+            .mobile-client-work {
+                padding-top: 2rem !important;
+                padding-bottom: 2rem !important;
+            }
+
+            .mobile-client-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 1rem !important;
+            }
+
+            .mobile-vertical-title {
+                writing-mode: horizontal-tb !important;
+                transform: none !important;
+                text-align: center !important;
+                font-size: 2rem !important;
+                margin-bottom: 2rem !important;
+            }
+
+            .mobile-contact-grid {
+                grid-template-columns: 1fr !important;
+            }
+
+            .mobile-contact-image {
+                order: 2 !important;
+                min-height: 300px !important;
+            }
+
+            .mobile-contact-content {
+                order: 1 !important;
+                padding: 2rem 1.5rem !important;
+            }
+
+            .mobile-contact-title {
+                font-size: clamp(2.5rem, 12vw, 4rem) !important;
+                line-height: 0.9 !important;
+            }
+
+            .mobile-contact-info {
+                font-size: 1rem !important;
+            }
+
+            .mobile-contact-footer {
+                padding: 1.5rem !important;
+                font-size: 0.7rem !important;
+            }
+
+            .mobile-influencer-title {
+                font-size: clamp(2rem, 10vw, 3rem) !important;
+            }
+
+            .mobile-influencer-subtitle {
+                font-size: clamp(1.5rem, 8vw, 2.5rem) !important;
+            }
+
+            .mobile-svg-circle {
+                display: none !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .mobile-polaroid-grid {
+                grid-template-columns: 1fr !important;
+                gap: 1rem !important;
+            }
+
+            .mobile-client-grid {
+                grid-template-columns: 1fr !important;
+            }
+
+            .mobile-contact-title {
+                font-size: 2.5rem !important;
+            }
+        }
+
+        /* Additional global mobile improvements */
+        @media (max-width: 768px) {
+            .max-w-7xl {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+
+            section {
+                padding-top: 3rem !important;
+                padding-bottom: 3rem !important;
+            }
+
+            .aspect-\[9\/16\] {
+                aspect-ratio: 3/4 !important;
+            }
+
+            .font-handwriting {
+                font-size: 0.7rem !important;
+            }
+        }
     </style>
 </head>
 
@@ -114,12 +294,13 @@
         <div class="max-w-4xl mx-auto text-center animate-fade-in">
             <!-- Portfolio Title -->
             <h1
-                class="text-[110px] text-center mx-auto text-[#c09569] letter-spacing-wide leading-none text-shadow font-alta">
+                class="text-[110px] md:text-[110px] text-mobile-portfolio text-center mx-auto text-[#c09569] letter-spacing-wide leading-none text-shadow font-alta">
                 PORTFOLIO
             </h1>
 
             <!-- Subtitle -->
-            <p class="text-[17.8px] text-[#c09569] font-cotoris italic leading-relaxed mx-auto">
+            <p
+                class="text-[17.8px] md:text-[17.8px] text-mobile-subtitle text-[#c09569] font-cotoris italic leading-relaxed mx-auto">
                 helping brands grow and connect with their public through strategic social media content
             </p>
         </div>
@@ -128,9 +309,9 @@
     <!-- About Me Section -->
     <section id="about" class="relative z-10 py-20 bg-[#f4f5f0] bg-opacity-60">
         <div class="max-w-7xl mx-auto">
-            <div class="grid p-10 lg:grid-cols-3 gap-12 items-center">
+            <div class="grid p-10 lg:grid-cols-3 mobile-about-grid gap-12 items-center">
                 <!-- Image -->
-                <div class="relative h-full">
+                <div class="relative h-full mobile-about-image">
                     <img src="./assets/images/f41a6aaf28b3a22804c2fbef651599b0.jpg"
                         alt="Professional woman in business attire"
                         class="w-full h-auto rounded-xl object-cover object-top" style="max-height: 400px;" />
@@ -138,7 +319,7 @@
 
                 <!-- Text Content -->
                 <div
-                    class="bg-white border border-[#c09569] bg-opacity-80 p-8 sm:p-12 rounded-2xl col-span-2 lg:order-first">
+                    class="bg-white border border-[#c09569] bg-opacity-80 p-8 sm:p-12 mobile-about-text rounded-2xl col-span-2 lg:order-first">
                     <h2
                         class="text-4xl sm:text-5xl lg:text-6xl text-[#d4cfb1] letter-spacing-wide font-alta text-center">
                         ABOUT ME
@@ -173,15 +354,15 @@
 
     <!-- Social Media Management Section -->
     <section id="services" class="relative z-10 py-20 bg-[#ffffff]">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid lg:grid-cols-2 mobile-services-grid gap-16 items-center">
 
                 <!-- Left side - Polaroid Images -->
                 <div class="relative flex justify-center lg:justify-start">
-                    <div class="grid grid-cols-2 gap-8 max-w-lg">
+                    <div class="grid grid-cols-2 mobile-polaroid-grid gap-8 max-w-lg">
                         <!-- Polaroid 1 - Top Left -->
                         <div
-                            class="polaroid bg-white p-3 transform -rotate-3 shadow-xl hover:shadow-2xl transition-all duration-300 hover:z-50 relative z-40">
+                            class="polaroid mobile-polaroid bg-white p-3 transform -rotate-3 shadow-xl hover:shadow-2xl transition-all duration-300 hover:z-50 relative z-40">
                             <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
                                 alt="Social media workspace" class="w-full h-40 object-cover rounded-sm" />
                             <div class="mt-3 text-center text-sm text-gray-600 font-handwriting">
@@ -191,7 +372,7 @@
 
                         <!-- Polaroid 2 - Top Right -->
                         <div
-                            class="polaroid bg-white p-3 transform rotate-2 shadow-xl hover:shadow-2xl transition-all duration-300 hover:z-50 relative z-30 -mt-6">
+                            class="polaroid mobile-polaroid bg-white p-3 transform rotate-2 shadow-xl hover:shadow-2xl transition-all duration-300 hover:z-50 relative z-30 -mt-6">
                             <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
                                 alt="Business planning" class="w-full h-40 object-cover rounded-sm" />
                             <div class="mt-3 text-center text-sm text-gray-600 font-handwriting">
@@ -201,7 +382,7 @@
 
                         <!-- Polaroid 3 - Bottom Left -->
                         <div
-                            class="polaroid bg-white p-3 transform rotate-1 shadow-xl hover:shadow-2xl transition-all duration-300 hover:z-50 relative z-20 -mt-8 ml-4">
+                            class="polaroid mobile-polaroid bg-white p-3 transform rotate-1 shadow-xl hover:shadow-2xl transition-all duration-300 hover:z-50 relative z-20 -mt-8 ml-4">
                             <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
                                 alt="Analytics dashboard" class="w-full h-40 object-cover rounded-sm" />
                             <div class="mt-3 text-center text-sm text-gray-600 font-handwriting">
@@ -211,7 +392,7 @@
 
                         <!-- Polaroid 4 - Bottom Right -->
                         <div
-                            class="polaroid bg-white p-3 transform -rotate-2 shadow-xl hover:shadow-2xl transition-all duration-300 hover:z-50 relative z-10 -mt-12 -ml-2">
+                            class="polaroid mobile-polaroid bg-white p-3 transform -rotate-2 shadow-xl hover:shadow-2xl transition-all duration-300 hover:z-50 relative z-10 -mt-12 -ml-2">
                             <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
                                 alt="Creative workspace" class="w-full h-40 object-cover rounded-sm" />
                             <div class="mt-3 text-center text-sm text-gray-600 font-handwriting">
@@ -256,205 +437,283 @@
 
     <!-- Brands Section -->
     <section class="relative z-10 py-20 bg-[#fef9ff]">
-        <div class="max-w-7xl max-w-7xl mx-auto">
+        <div class="max-w-7xl mx-auto px-4">
             <div class="grid lg:grid-cols-2 gap-12 items-start">
                 <!-- Instagram Profiles Grid -->
-                <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 mobile-brands-grid gap-10">
                     <!-- Section Title -->
                     <div class="flex justify-center flex-col lg:col-span-1">
-                        <h2 class="text-[100px] text-[#d4cfb1] leading-none font-alta">
+                        <h2
+                            class="text-[100px] md:text-[100px] text-[clamp(3rem,15vw,6rem)] text-[#d4cfb1] leading-none font-alta">
                             BRANDS
                         </h2>
-                        <span class="text-[#c09569] font-cotoris text-[50px]">I have worked
+                        <span
+                            class="text-[#c09569] font-cotoris text-[50px] md:text-[50px] text-[clamp(1.5rem,8vw,3rem)]">I
+                            have worked
                             with</span>
                     </div>
 
                     <!-- Marena Cucina -->
-                    <div
+                    <a href="https://www.instagram.com/marenacucina" target="_blank"
                         class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                        <div class="flex items-center space-x-4 mb-4">
-                            <div class="w-16 h-16 rounded-full bg-gradient-to-br from-pink-500 to-yellow-500 p-1">
-                                <div class="w-full h-full rounded-full bg-white flex items-center justify-center">
-                                    <span class="text-lg font-bold text-gray-800">M</span>
+                        <div class="flex flex-col lg:flex-row items-center space-x-4 mb-4">
+                            <div
+                                class="w-[120px] h-[120px] rounded-full bg-gradient-to-br from-yellow-400 to-pink-500 p-1">
+                                <div class="w-full h-full rounded-full bg-black flex items-center justify-center">
+                                    <img src="./assets/images/465078184_442778628849475_3148620161897489895_n.jpg"
+                                        alt="" class="rounded-full">
                                 </div>
                             </div>
                             <div class="flex-1">
-                                <h3 class="font-semibold text-gray-800">marenacucina</h3>
-                                <p class="text-sm text-gray-500">Following</p>
+                                <div class="flex justify-between items-center mb-3">
+                                    <h3 class="font-semibold text-gray-800">marenacucina</h3>
+                                    <div class="flex justify-between items-center gap-2">
+                                        <button
+                                            class="bg-blue-500 text-white px-4 py-1 rounded text-sm font-medium">Follow</button>
+                                    </div>
+                                </div>
+
+                                <div class="text-center mb-4">
+                                    <div class="flex justify-between space-x-8 text-sm">
+                                        <div><span class="font-semibold">113</span> posts</div>
+                                        <div><span class="font-semibold">20.6K</span> followers</div>
+                                        <div><span class="font-semibold">33</span> following</div>
+                                    </div>
+                                </div>
+                                <div class="text-sm text-gray-700">
+                                    <p class="font-semibold">Marena Cucina</p>
+                                    <p>Italian Restaurant</p>
+                                    <p>Tutto fresco & fatto in casa!</p>
+                                    <p>Guia MICHELIN 2025 @michelinguide</p>
+                                </div>
                             </div>
-                            <button class="text-blue-500 text-sm font-medium">Message</button>
                         </div>
-                        <div class="text-center mb-4">
-                            <div class="flex justify-center space-x-8 text-sm">
-                                <div><span class="font-semibold">113</span> posts</div>
-                                <div><span class="font-semibold">20.6K</span> followers</div>
-                                <div><span class="font-semibold">33</span> following</div>
-                            </div>
-                        </div>
-                        <div class="text-sm text-gray-700">
-                            <p class="font-semibold">Marena Cucina</p>
-                            <p>Italian Restaurant</p>
-                            <p>Tutto fresco & fatto in casa!</p>
-                            <p>Guia MICHELIN 2025 @michelinguide</p>
-                        </div>
-                    </div>
+                    </a>
 
                     <!-- Restaurant Arabia -->
-                    <div
+                    <a href="https://www.instagram.com/restaurantearabia" target="_blank"
                         class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                        <div class="flex items-center space-x-4 mb-4">
-                            <div class="w-16 h-16 rounded-full bg-gradient-to-br from-red-600 to-yellow-500 p-1">
-                                <div class="w-full h-full rounded-full bg-red-700 flex items-center justify-center">
-                                    <span class="text-lg font-bold text-white">ع</span>
+                        <div class="flex flex-col lg:flex-row items-center space-x-6">
+                            <div
+                                class="w-[120px] h-[120px] rounded-full bg-gradient-to-br from-yellow-400 to-pink-500 p-1">
+                                <div class="w-full h-full rounded-full bg-black flex items-center justify-center">
+                                    <img src="./assets/images/397450157_315100491260160_5126345904614325682_n.jpg"
+                                        alt="" class="rounded-full">
                                 </div>
                             </div>
                             <div class="flex-1">
-                                <h3 class="font-semibold text-gray-800">restaurantearabia</h3>
-                                <p class="text-sm text-gray-500">Following</p>
+                                <div class="flex justify-between items-center mb-3">
+                                    <h3 class="font-semibold text-gray-800">restaurantearabia</h3>
+                                    <div class="flex justify-between items-center gap-2">
+                                        <button
+                                            class="bg-blue-500 text-white px-4 py-1 rounded text-sm font-medium">Follow</button>
+                                    </div>
+                                </div>
+                                <div class="text-center mb-4">
+                                    <div class="flex justify-between space-x-8 text-sm">
+                                        <div><span class="font-semibold">1,613</span> posts</div>
+                                        <div><span class="font-semibold">56.8K</span> followers</div>
+                                        <div><span class="font-semibold">386</span> following</div>
+                                    </div>
+                                </div>
+                                <div class="text-sm text-gray-700">
+                                    <p class="font-semibold">Restaurante Arabia</p>
+                                    <p>Restaurant</p>
+                                    <p>Cozinha de cór</p>
+                                    <p>Culinária árabe, feita com excelência desde 1987.</p>
+                                </div>
                             </div>
-                            <button class="text-blue-500 text-sm font-medium">Message</button>
                         </div>
-                        <div class="text-center mb-4">
-                            <div class="flex justify-center space-x-8 text-sm">
-                                <div><span class="font-semibold">1,613</span> posts</div>
-                                <div><span class="font-semibold">56.8K</span> followers</div>
-                                <div><span class="font-semibold">386</span> following</div>
-                            </div>
-                        </div>
-                        <div class="text-sm text-gray-700">
-                            <p class="font-semibold">Restaurante Arabia</p>
-                            <p>Restaurant</p>
-                            <p>Cozinha de cór</p>
-                            <p>Culinária árabe, feita com excelência desde 1987.</p>
-                        </div>
-                    </div>
+                    </a>
 
                     <!-- AMA Time -->
-                    <div
+                    <a href="https://www.instagram.com/amatime_br" target="_blank"
                         class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                        <div class="flex items-center space-x-4 mb-4">
-                            <div class="w-16 h-16 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 p-1">
-                                <div class="w-full h-16 rounded-full bg-gray-600 flex items-center justify-center">
-                                    <span class="text-sm font-bold text-white">AMA</span>
+                        <div class="flex flex-col lg:flex-row items-center space-x-6">
+                            <div
+                                class="w-[120px] h-[120px] rounded-full bg-gradient-to-br from-yellow-400 to-pink-500 p-1">
+                                <div class="w-full h-full rounded-full bg-black flex items-center justify-center">
+                                    <img src="./assets/images/283980115_717797709277492_8293303829861853523_n.jpg"
+                                        alt="" class="rounded-full">
                                 </div>
                             </div>
                             <div class="flex-1">
-                                <h3 class="font-semibold text-gray-800">amatime_br</h3>
-                                <p class="text-sm text-gray-500">Following</p>
+                                <div class="flex justify-between items-center mb-3">
+                                    <h3 class="font-semibold text-gray-800">amatime_br</h3>
+                                    <div class="flex justify-between items-center gap-2">
+                                        <p class="text-sm text-gray-500">Following</p>
+                                        <button class="text-blue-500 text-sm font-medium">Message</button>
+                                    </div>
+                                </div>
+                                <div class="text-center mb-4">
+                                    <div class="flex justify-between space-x-8 text-sm">
+                                        <div><span class="font-semibold">84</span> publicações</div>
+                                        <div><span class="font-semibold">1.411</span> seguidores</div>
+                                        <div><span class="font-semibold">312</span> seguindo</div>
+                                    </div>
+                                </div>
+                                <div class="text-sm text-gray-700">
+                                    <p class="font-semibold">AMA Time Brasil</p>
+                                    <p>🍃 Sucos e purês de frutas 100% orgânicos</p>
+                                    <p>🌿 Livres de conservantes, açúcar e concentrados</p>
+                                    <p>🌱 Amigáveis com o meio... <span class="text-blue-500">mais</span></p>
+                                    <p class="text-blue-500 mt-1">🔗 linktr.ee/amatime</p>
+                                </div>
                             </div>
-                            <button class="text-blue-500 text-sm font-medium">Message</button>
                         </div>
-                        <div class="text-center mb-4">
-                            <div class="flex justify-center space-x-8 text-sm">
-                                <div><span class="font-semibold">83</span> posts</div>
-                                <div><span class="font-semibold">1,380</span> followers</div>
-                                <div><span class="font-semibold">312</span> following</div>
-                            </div>
-                        </div>
-                        <div class="text-sm text-gray-700">
-                            <p class="font-semibold">AMA Time Brasil</p>
-                            <p>🍃 Livres de açúcar, frutas 100% orgânicas</p>
-                            <p>🌿 Sem conservantes, açúcar e concentrados</p>
-                            <p>🌱 Amigáveis com o meio...</p>
-                        </div>
-                    </div>
+                    </a>
 
                     <!-- PAO Padaria -->
-                    <div
+                    <a href="https://www.instagram.com/padariaorganica" target="_blank"
                         class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                        <div class="flex items-center space-x-4 mb-4">
-                            <div class="w-16 h-16 rounded-full bg-gradient-to-br from-yellow-400 to-pink-500 p-1">
+                        <div class="flex flex-col lg:flex-row items-center space-x-6">
+                            <div
+                                class="w-[120px] h-[120px] rounded-full bg-gradient-to-br from-yellow-400 to-pink-500 p-1">
                                 <div class="w-full h-full rounded-full bg-black flex items-center justify-center">
-                                    <span class="text-lg font-bold text-white">PAO</span>
+                                    <img src="./assets/images/194337396_305886814421824_8418737186137255874_n.jpg"
+                                        alt="" class="rounded-full">
                                 </div>
                             </div>
                             <div class="flex-1">
-                                <h3 class="font-semibold text-gray-800">padariaorganica</h3>
-                                <p class="text-sm text-gray-500">Following</p>
+                                <div class="flex justify-between items-center mb-3">
+                                    <h3 class="font-semibold text-gray-800">padariaorganica</h3>
+                                    <div class="flex justify-between items-center gap-2">
+                                        <button
+                                            class="bg-blue-500 text-white px-4 py-1 rounded text-sm font-medium">Follow</button>
+                                    </div>
+                                </div>
+                                <div class="text-center mb-4">
+                                    <div class="flex justify-between space-x-8 text-sm">
+                                        <div><span class="font-semibold">2,050</span> posts</div>
+                                        <div><span class="font-semibold">74K</span> followers</div>
+                                        <div><span class="font-semibold">1,051</span> following</div>
+                                    </div>
+                                </div>
+                                <div class="text-sm text-gray-700">
+                                    <p class="font-semibold">PAO - Padaria Orgânica</p>
+                                    <p>Restaurant</p>
+                                    <p>Desde 2007, produzindo comida artesanal com ingredientes orgânicos</p>
+                                    <p>Cheia de carinho.</p>
+                                </div>
                             </div>
-                            <button class="text-blue-500 text-sm font-medium">Message</button>
                         </div>
-                        <div class="text-center mb-4">
-                            <div class="flex justify-center space-x-8 text-sm">
-                                <div><span class="font-semibold">2,050</span> posts</div>
-                                <div><span class="font-semibold">74K</span> followers</div>
-                                <div><span class="font-semibold">1,051</span> following</div>
-                            </div>
-                        </div>
-                        <div class="text-sm text-gray-700">
-                            <p class="font-semibold">PAO - Padaria Orgânica</p>
-                            <p>Restaurant</p>
-                            <p>Desde 2007, produzindo comida artesanal com ingredientes orgânicos</p>
-                            <p>Cheia de carinho.</p>
-                        </div>
-                    </div>
+                    </a>
 
                     <!-- Ofner -->
-                    <div
+                    <a href="https://www.instagram.com/ofner" target="_blank"
                         class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                        <div class="flex items-center space-x-4 mb-4">
-                            <div class="w-16 h-16 rounded-full bg-gradient-to-br from-orange-500 to-red-500 p-1">
-                                <div class="w-full h-full rounded-full bg-orange-600 flex items-center justify-center">
-                                    <span class="text-lg font-bold text-white italic">O</span>
+                        <div class="flex flex-col lg:flex-row items-center space-x-6">
+                            <div
+                                class="w-[120px] h-[120px] rounded-full bg-gradient-to-br from-yellow-400 to-pink-500 p-1">
+                                <div class="w-full h-full rounded-full bg-black flex items-center justify-center">
+                                    <img src="./assets/images/135049412_2907893856111383_99665079531678938_n.jpg" alt=""
+                                        class="rounded-full">
                                 </div>
                             </div>
                             <div class="flex-1">
-                                <h3 class="font-semibold text-gray-800">ofner</h3>
-                                <p class="text-sm text-gray-500">Following</p>
+                                <div class="flex justify-between items-center mb-3">
+                                    <h3 class="font-semibold text-gray-800">ofner</h3>
+                                    <div class="flex justify-between items-center gap-2">
+                                        <button
+                                            class="bg-blue-500 text-white px-4 py-1 rounded text-sm font-medium">Follow</button>
+                                    </div>
+                                </div>
+                                <div class="text-center mb-4">
+                                    <div class="flex justify-between space-x-8 text-sm">
+                                        <div><span class="font-semibold">2,511</span> posts</div>
+                                        <div><span class="font-semibold">186K</span> followers</div>
+                                        <div><span class="font-semibold">81</span> following</div>
+                                    </div>
+                                </div>
+                                <div class="text-sm text-gray-700">
+                                    <p class="font-semibold">Ofner</p>
+                                    <p>Product/service</p>
+                                    <p>Recheado da vida com boas histórias</p>
+                                    <p>🔗 linktr.ee/LojasOfnerOficial</p>
+                                </div>
                             </div>
-                            <button class="text-blue-500 text-sm font-medium">Message</button>
                         </div>
-                        <div class="text-center mb-4">
-                            <div class="flex justify-center space-x-8 text-sm">
-                                <div><span class="font-semibold">2,511</span> posts</div>
-                                <div><span class="font-semibold">186K</span> followers</div>
-                                <div><span class="font-semibold">81</span> following</div>
+                    </a>
+
+                    <!-- L’Atelier Ofner -->
+                    <a href="https://www.instagram.com/latelierofner" target="_blank"
+                        class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                        <div class="flex flex-col lg:flex-row items-center space-x-6">
+                            <div
+                                class="w-[120px] h-[120px] rounded-full bg-gradient-to-br from-yellow-400 to-pink-500 p-1">
+                                <div class="w-full h-full rounded-full bg-black flex items-center justify-center">
+                                    <img src="./assets/images/498545526_18308705362212150_2982724305700891111_n.jpg"
+                                        alt="" class="rounded-full">
+                                </div>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex justify-between items-center mb-3">
+                                    <h3 class="font-semibold text-gray-800">latelierofner</h3>
+                                    <div class="flex justify-between items-center gap-2">
+                                        <button
+                                            class="bg-blue-500 text-white px-4 py-1 rounded text-sm font-medium">Follow</button>
+                                    </div>
+                                </div>
+                                <div class="text-center mb-4">
+                                    <div class="flex justify-between space-x-8 text-sm">
+                                        <div><span class="font-semibold">539</span> posts</div>
+                                        <div><span class="font-semibold">12.6k</span> followers</div>
+                                        <div><span class="font-semibold">128</span> following</div>
+                                    </div>
+                                </div>
+                                <div class="text-sm text-gray-700">
+                                    <p class="font-semibold">L’Atelier Ofner</p>
+                                    <p>Produto/serviço</p>
+                                    <p>Faça sua encomenda através do link abaixo:</p>
+                                    <p>Alameda Campinas, 1160 - Mezanino Jardins, São Paulo, Brazil 01423010</p>
+                                    <p>bit.ly/whatsapplat</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="text-sm text-gray-700">
-                            <p class="font-semibold">Ofner</p>
-                            <p>Product/service</p>
-                            <p>Recheado da vida com boas histórias</p>
-                            <p>🔗 linktr.ee/LojasOfnerOficial</p>
-                        </div>
-                    </div>
+                    </a>
 
                     <!-- Djapa Moema -->
-                    <div
+                    <a href="https://www.instagram.com/djapa_moema_oficial" target="_blank"
                         class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                        <div class="flex items-center space-x-4 mb-4">
-                            <div class="w-16 h-16 rounded-full bg-gradient-to-br from-yellow-400 to-orange-500 p-1">
+                        <div class="flex flex-col lg:flex-row items-center space-x-6">
+                            <div
+                                class="w-[120px] h-[120px] rounded-full bg-gradient-to-br from-yellow-400 to-pink-500 p-1">
                                 <div class="w-full h-full rounded-full bg-black flex items-center justify-center">
-                                    <span class="text-xs font-bold text-yellow-400">DJAPA</span>
+                                    <img src="./assets/images/118687743_939867316510570_2483890534253229519_n.jpg"
+                                        alt="" class="rounded-full">
                                 </div>
                             </div>
                             <div class="flex-1">
-                                <h3 class="font-semibold text-gray-800">djapa_moema_oficial</h3>
-                                <p class="text-sm text-gray-500">Follow</p>
+                                <div class="flex justify-between items-center mb-3">
+                                    <h3 class="font-semibold text-gray-800">djapa_moema_oficial</h3>
+                                    <div class="flex justify-between items-center gap-2">
+                                        <button
+                                            class="bg-blue-500 text-white px-4 py-1 rounded text-sm font-medium">Follow</button>
+                                    </div>
+                                </div>
+                                <div class="text-center mb-4">
+                                    <div class="flex justify-between space-x-8 text-sm">
+                                        <div><span class="font-semibold">1,455</span> posts</div>
+                                        <div><span class="font-semibold">82.3K</span> followers</div>
+                                        <div><span class="font-semibold">25</span> following</div>
+                                    </div>
+                                </div>
+                                <div class="text-sm text-gray-700">
+                                    <p class="font-semibold">Djapa Moema</p>
+                                    <p>Restaurant</p>
+                                    <p>🍜 O melhor rodízio japonês de São Paulo.</p>
+                                    <p>🏆 Certificado de excelência pelo TripAdvisor.</p>
+                                    <p>🚚 Delivery pelo iFood</p>
+                                </div>
                             </div>
-                            <button class="bg-blue-500 text-white px-4 py-1 rounded text-sm font-medium">Follow</button>
                         </div>
-                        <div class="text-center mb-4">
-                            <div class="flex justify-center space-x-8 text-sm">
-                                <div><span class="font-semibold">1,455</span> posts</div>
-                                <div><span class="font-semibold">82.3K</span> followers</div>
-                                <div><span class="font-semibold">25</span> following</div>
-                            </div>
-                        </div>
-                        <div class="text-sm text-gray-700">
-                            <p class="font-semibold">Djapa Moema</p>
-                            <p>Restaurant</p>
-                            <p>🍜 O melhor rodízio japonês de São Paulo.</p>
-                            <p>🏆 Certificado de excelência pelo TripAdvisor.</p>
-                            <p>🚚 Delivery pelo iFood</p>
-                        </div>
-                    </div>
+                    </a>
                 </div>
             </div>
 
             <!-- Call to Action -->
             <div class="text-center mt-16">
-                <p class="text-[34px] text-[#a2c4e0] mb-8 font-light italic font-cotoris tracking-[10px]">
+                <p class="lg:text-[34px] text-[#a2c4e0] mb-8 font-light italic font-cotoris tracking-[10px]">
                     click on image to see on Instagram
                 </p>
             </div>
@@ -462,21 +721,21 @@
     </section>
 
     <!-- Client Work Section 1 -->
-    <section class="relative z-10 pb-20 pt-40 bg-[#f4f5f0] overflow-hidden">
-        <div class="max-w-7xl mx-auto">
+    <section class="relative z-10 pb-20 pt-40 mobile-client-work bg-[#f4f5f0] overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4">
             <div class="flex flex-col lg:flex-row items-center lg:items-start gap-12">
 
                 <!-- Vertical Title -->
                 <div class="flex-shrink-0 lg:w-32 flex items-center justify-center self-stretch">
                     <h2
-                        class="text-5xl sm:text-6xl font-light text-[#d4cfb1] tracking-widest [writing-mode:vertical-rl] transform rotate-180 whitespace-nowrap">
+                        class="text-5xl sm:text-6xl mobile-vertical-title font-light text-[#d4cfb1] tracking-widest [writing-mode:vertical-rl] transform rotate-180 whitespace-nowrap">
                         CLIENT WORK
                     </h2>
                 </div>
 
                 <!-- Main Content -->
                 <div class="flex-grow">
-                    <div class="grid grid-cols-2 md:grid-cols-5 gap-6">
+                    <div class="grid grid-cols-2 md:grid-cols-5 mobile-client-grid gap-6">
 
                         <!-- Video Item 1 -->
                         <div class="relative group cursor-pointer">
@@ -494,12 +753,12 @@
                                 class="aspect-[9/16] bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                                 <img src="./assets/images/1f72e1f311088beb01b3d0d10482fbcc.png"
                                     alt="Ofner advent calendar" class="w-full h-full object-cover" />
-                                <div
+                                <a href="https://www.instagram.com/reel/DCZJLIHOGvG/" target="_blank"
                                     class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                     <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
                                         <path d="M8 5v14l11-7z" />
                                     </svg>
-                                </div>
+                                </a>
                             </div>
                         </div>
 
@@ -520,12 +779,12 @@
                                 class="aspect-[9/16] bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                                 <img src="./assets/images/4cc9e939b91c407dac5395debf412d77.png" alt="Ofner ice cream"
                                     class="w-full h-full object-cover" />
-                                <div
+                                <a href="https://www.instagram.com/reel/C45f6J1LYyZ/" target="_blank"
                                     class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                     <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
                                         <path d="M8 5v14l11-7z" />
                                     </svg>
-                                </div>
+                                </a>
                             </div>
                         </div>
 
@@ -545,12 +804,12 @@
                                 class="aspect-[9/16] bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                                 <img src="./assets/images/094461e14dcd655ee44627c5ae219737.png" alt="Colorful sprinkles"
                                     class="w-full h-full object-cover" />
-                                <div
+                                <a href="https://www.instagram.com/reel/C6mf0TSvJbc/" target="_blank"
                                     class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                     <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
                                         <path d="M8 5v14l11-7z" />
                                     </svg>
-                                </div>
+                                </a>
                             </div>
                         </div>
 
@@ -571,17 +830,17 @@
                                 class="aspect-[9/16] bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                                 <img src="./assets/images/f441a0e451bc01446a8fe71dd40c1ae3.png" alt="Ofner products"
                                     class="w-full h-full object-cover" />
-                                <div
+                                <a href="https://www.instagram.com/reel/C4vcQUQrXMO/" target="_blank"
                                     class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                     <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
                                         <path d="M8 5v14l11-7z" />
                                     </svg>
-                                </div>
+                                </a>
                             </div>
                         </div>
 
                         <!-- Bottom Text -->
-                        <div class="flex justify-between items-start mt-[50%]">
+                        <div class="flex justify-between items-start mt-1 lg:mt-[50%]">
                             <div class="text-right relative">
                                 <p class="text-[15px] text-[#c8b896] text-left font-light italic leading-relaxed">
                                     Videos created from scratch<br>
@@ -597,7 +856,8 @@
                     <!-- Bottom Text -->
                     <div class="flex justify-between items-end mt-8">
                         <div>
-                            <p class="text-[34px] text-[#a2c4e0] mb-8 font-light italic font-cotoris tracking-[10px]">
+                            <p
+                                class="lg:text-[34px] text-[#a2c4e0] mb-8 font-light italic font-cotoris tracking-[10px]">
                                 click on image to watch on Instagram
                             </p>
                         </div>
@@ -615,7 +875,7 @@
                 <!-- Vertical Title -->
                 <div class="flex-shrink-0 lg:w-32 flex items-center justify-center self-stretch">
                     <h2
-                        class="text-5xl sm:text-6xl font-light text-[#d4cfb1] tracking-widest [writing-mode:vertical-rl] transform rotate-180 whitespace-nowrap">
+                        class="text-5xl sm:text-6xl mobile-vertical-title font-light text-[#d4cfb1] tracking-widest [writing-mode:vertical-rl] transform rotate-180 whitespace-nowrap">
                         CLIENT WORK
                     </h2>
                 </div>
@@ -640,12 +900,12 @@
                                 class="aspect-[9/16] bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                                 <img src="./assets/images/9beba105853a3714bfa79e5d39702e59.png"
                                     alt="Ofner advent calendar" class="w-full h-full object-cover" />
-                                <div
+                                <a href="https://www.instagram.com/reel/C_tfD3pyLdi/" target="_blank"
                                     class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                     <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
                                         <path d="M8 5v14l11-7z" />
                                     </svg>
-                                </div>
+                                </a>
                             </div>
                         </div>
 
@@ -666,12 +926,12 @@
                                 class="aspect-[9/16] bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                                 <img src="./assets/images/950ec05a8b42c41829fa5cd4bcbaaf4d.png" alt="Ofner ice cream"
                                     class="w-full h-full object-cover" />
-                                <div
+                                <a href="https://www.instagram.com/reel/DDIKjUXyxWW/" target="_blank"
                                     class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                     <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
                                         <path d="M8 5v14l11-7z" />
                                     </svg>
-                                </div>
+                                </a>
                             </div>
                         </div>
 
@@ -692,17 +952,17 @@
                                 class="aspect-[9/16] bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                                 <img src="./assets/images/f1d2e9861052b591576c850e7e125f44.png" alt="Ofner products"
                                     class="w-full h-full object-cover" />
-                                <div
+                                <a href="https://www.instagram.com/reel/DLLO0T0tJaz/" target="_blank"
                                     class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                     <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
                                         <path d="M8 5v14l11-7z" />
                                     </svg>
-                                </div>
+                                </a>
                             </div>
                         </div>
 
                         <!-- Bottom Text -->
-                        <div class="flex justify-between items-start mt-[50%]">
+                        <div class="flex justify-between items-start mt-1 lg:mt-[50%]">
                             <div class="text-right relative">
                                 <p class="text-[15px] text-[#c8b896] text-left font-light italic leading-relaxed">
                                     Videos created from scratch<br>
@@ -718,7 +978,8 @@
                     <!-- Bottom Text -->
                     <div class="flex justify-between items-end mt-8">
                         <div>
-                            <p class="text-[34px] text-[#a2c4e0] mb-8 font-light italic font-cotoris tracking-[10px]">
+                            <p
+                                class="lg:text-[34px] text-[#a2c4e0] mb-8 font-light italic font-cotoris tracking-[10px]">
                                 click on image to watch on Instagram
                             </p>
                         </div>
@@ -729,22 +990,24 @@
     </section>
 
     <!-- Influencers Section -->
-    <section class="relative z-10 py-20 bg-[#f5f1e6] overflow-hidden">
-        <div class="max-w-7xl mx-auto">
+    <section class="relative z-10 py-5 lg:py-20 bg-[#f5f1e6] overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4">
             <!-- Section Title -->
-            <div class="flex justify-center flex-col lg:col-span-1 mb-[100px]">
+            <div class="flex justify-center flex-col lg:col-span-1 mb-4 lg:mb-[100px]">
                 <h2
-                    class="text-5xl sm:text-6xl lg:text-7xl font-light text-[#a2c4e0] leadng-tight letter-spacing-wide font-alta">
+                    class="text-5xl sm:text-6xl lg:text-7xl mobile-influencer-title font-light text-[#a2c4e0] leadng-tight letter-spacing-wide font-alta">
                     Influencers
                 </h2>
-                <span class="text-[#e8d2b8] text-4xl sm:text-5xl lg:text-6xl font-cotoris">I have worked with</span>
+                <span class="text-[#e8d2b8] text-4xl sm:text-5xl lg:text-6xl mobile-influencer-subtitle font-cotoris">I
+                    have worked with</span>
             </div>
 
             <div class="flex flex-col lg:flex-row items-center lg:items-start gap-12">
                 <!-- Main Content -->
                 <div class="flex-grow">
-                    <div class="grid grid-cols-2 md:grid-cols-5 gap-6"><!-- Bottom Text -->
-                        <div class="flex justify-between items-start mt-[50%]">
+                    <div class="grid grid-cols-2 md:grid-cols-5 mobile-client-grid gap-6">
+                        <!-- Bottom Text -->
+                        <div class="flex justify-between items-start mt-1 lg:mt-[50%]">
                             <div class="text-left relative">
                                 <p class="text-lg text-[#c8b896] font-light italic leading-relaxed">
                                     Influencer campaigns<br>
@@ -773,12 +1036,12 @@
                                 class="aspect-[9/16] bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                                 <img src="./assets/images/86fa824dd46b048c8252cbbb59a1a2c1.png"
                                     alt="Ofner advent calendar" class="w-full h-full object-cover" />
-                                <div
+                                <a href="https://www.instagram.com/reel/C5_68PbAw5i/?hl=en" target="_blank"
                                     class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                     <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
                                         <path d="M8 5v14l11-7z" />
                                     </svg>
-                                </div>
+                                </a>
                             </div>
                         </div>
 
@@ -799,12 +1062,12 @@
                                 class="aspect-[9/16] bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                                 <img src="./assets/images/10a646973deb578e7dc471321a050acb.png" alt="Ofner ice cream"
                                     class="w-full h-full object-cover" />
-                                <div
+                                <a href="https://www.instagram.com/reel/C41TeMXrYPe/?hl=en" target="_blank"
                                     class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                     <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
                                         <path d="M8 5v14l11-7z" />
                                     </svg>
-                                </div>
+                                </a>
                             </div>
                         </div>
 
@@ -823,13 +1086,13 @@
                             <div
                                 class="aspect-[9/16] bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                                 <img src="./assets/images/f032824209a53f22cb60db8bd66f0671.png" alt="Colorful sprinkles"
-                                    class="w-full h-full object-cover" />
-                                <div
+                                    class="w-full h-full object-cover object-bottom" />
+                                <a href="https://www.instagram.com/reel/DJ48IEwOCdn/?hl=en" target="_blank"
                                     class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                     <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
                                         <path d="M8 5v14l11-7z" />
                                     </svg>
-                                </div>
+                                </a>
                             </div>
                         </div>
 
@@ -850,22 +1113,88 @@
                                 class="aspect-[9/16] bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                                 <img src="./assets/images/4660dd3bc30fdf3b138a52b639155504.png" alt="Ofner products"
                                     class="w-full h-full object-cover" />
-                                <div
+                                <a href="https://www.instagram.com/reel/C6ytZkeOWuB/?hl=en" target="_blank"
                                     class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                     <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
                                         <path d="M8 5v14l11-7z" />
                                     </svg>
-                                </div>
+                                </a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Bottom Text -->
-                    <div class="flex justify-center items-end mt-8">
+                    <div class="flex justify-between items-end mt-8">
                         <div>
-                            <p class="text-[34px] text-[#d4cfb1] mb-8 font-light italic font-cotoris tracking-[10px]">
+                            <p
+                                class="lg:text-[34px] text-[#a2c4e0] mb-8 font-light italic font-cotoris tracking-[10px]">
                                 click on image to watch on Instagram
                             </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="bg-[#f0ede5] py-0 min-h-screen relative">
+        <div class="h-screen grid lg:grid-cols-2 mobile-contact-grid gap-0">
+            <!-- Left Side - Image/Photo -->
+            <div class="relative bg-[#f0ede5] mobile-contact-image flex items-center justify-center">
+                <img src="./assets/images/background.png" alt="Your Photo" class="max-w-full h-auto" />
+            </div>
+
+            <!-- Right Side - Contact Information -->
+            <div class="relative bg-white mobile-contact-content flex flex-col">
+                <!-- Main Content Area -->
+                <div class="flex-1 flex flex-col justify-center px-16 lg:px-20">
+                    <!-- Title -->
+                    <div class="mb-16">
+                        <h2
+                            class="text-6xl lg:text-7xl xl:text-8xl mobile-contact-title text-black tracking-tight leading-none font-playfair">
+                            LET'S<br>CONTACT
+                        </h2>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="space-y-2 text-left font-public-sans">
+                        <!-- Phone -->
+                        <div>
+                            <a href="tel:+1234567890"
+                                class="text-xl lg:text-2xl mobile-contact-info text-[#000000] hover:text-black transition-colors duration-300 font-light">
+                                +123-456-7890
+                            </a>
+                        </div>
+
+                        <!-- Email -->
+                        <div>
+                            <a href="mailto:hello@reallygreatsite.com"
+                                class="text-xl lg:text-2xl mobile-contact-info text-[#000000] hover:text-black transition-colors duration-300 font-light">
+                                hello@reallygreatsite.com
+                            </a>
+                        </div>
+
+                        <!-- Website -->
+                        <div>
+                            <a href="https://www.reallygreatsite.com" target="_blank"
+                                class="text-xl lg:text-2xl mobile-contact-info text-[#000000] hover:text-black transition-colors duration-300 font-light">
+                                www.reallygreatsite.com
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer Information -->
+                <div class="px-16 lg:px-20 mobile-contact-footer pb-12 font-public-sans">
+                    <div class="flex justify-between items-end text-xs text-[#000000] uppercase tracking-widest">
+                        <div>
+                            <p>COMPANY</p>
+                            <p>PRESENTATION 2030</p>
+                        </div>
+                        <div class="text-right">
+                            <p>INTERIOR</p>
+                            <p>DESIGN STUDIO</p>
                         </div>
                     </div>
                 </div>
