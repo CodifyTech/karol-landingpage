@@ -114,6 +114,20 @@
             background-position: center;
         }
 
+        .animate-spin-slow {
+            animation: spin 10s linear infinite;
+            transform-origin: 50% 50%;
+        }
+        
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
         /* Mobile Responsive Styles */
         @media (max-width: 768px) {
             .hero-pattern {
@@ -309,19 +323,19 @@
     <!-- About Me Section -->
     <section id="about" class="relative z-10 py-20 bg-[#f4f5f0] bg-opacity-60">
         <div class="max-w-7xl mx-auto">
-            <div class="grid p-10 lg:grid-cols-3 mobile-about-grid gap-12 items-center">
+            <div class="flex flex-col sm:grid p-2 sm:p-10 sm:grid-cols-3 gap-12 items-stretch" style="align-items: stretch;">
                 <!-- Image -->
-                <div class="relative h-full mobile-about-image">
+                <div class="relative h-[480px] mobile-about-image flex items-stretch">
                     <img src="./assets/images/f41a6aaf28b3a22804c2fbef651599b0.jpg"
                         alt="Professional woman in business attire"
-                        class="w-full h-auto rounded-xl object-cover object-top" style="max-height: 400px;" />
+                        class="w-full h-full rounded-xl object-cover object-top" style="height: 100%;" />
                 </div>
 
                 <!-- Text Content -->
                 <div
-                    class="bg-white border border-[#c09569] bg-opacity-80 p-8 sm:p-12 mobile-about-text rounded-2xl col-span-2 lg:order-first">
+                    class="bg-white border border-[#c09569] bg-opacity-80 p-8 sm:p-12 mobile-about-text rounded-2xl col-span-2 lg:order-first flex flex-col items-stretch">
                     <h2
-                        class="text-4xl sm:text-5xl lg:text-6xl text-[#d4cfb1] letter-spacing-wide font-alta text-center">
+                        class="text-4xl sm:text-5xl lg:text-6xl text-[#d4cfb1] letter-spacing-wide font-alta text-center mb-4">
                         ABOUT ME
                     </h2>
 
@@ -338,8 +352,8 @@
                         </p>
 
                         <p>
-                            One of the biggest accounts I have managed was <span
-                                class="text-amber-600 font-medium">@Ofner</span> (~180k followers).
+                            One of the biggest accounts I have managed was <a href="https://www.instagram.com/ofner" target="_blank"
+                                class="text-amber-600 font-medium">@Ofner</a> (+180k followers).
                         </p>
 
                         <p>
@@ -359,7 +373,7 @@
 
                 <!-- Left side - Polaroid Images -->
                 <div class="relative flex justify-center lg:justify-start">
-                    <div class="grid grid-cols-2 mobile-polaroid-grid gap-8 max-w-lg">
+                    <div class="grid grid-cols-2 gap-8 max-w-lg">
                         <!-- Polaroid 1 - Top Left -->
                         <div
                             class="polaroid mobile-polaroid bg-white p-3 transform -rotate-3 shadow-xl hover:shadow-2xl transition-all duration-300 hover:z-50 relative z-40">
@@ -726,7 +740,7 @@
             <div class="flex flex-col lg:flex-row items-center lg:items-start gap-12">
 
                 <!-- Vertical Title -->
-                <div class="flex-shrink-0 lg:w-32 flex items-center justify-center self-stretch">
+                <div class="flex-shrink-0 lg:w-32 flex items-center justify-center lg:items-start lg:justify-end self-stretch">
                     <h2
                         class="text-5xl sm:text-6xl mobile-vertical-title font-light text-[#d4cfb1] tracking-widest [writing-mode:vertical-rl] transform rotate-180 whitespace-nowrap">
                         CLIENT WORK
@@ -735,11 +749,11 @@
 
                 <!-- Main Content -->
                 <div class="flex-grow">
-                    <div class="grid grid-cols-2 md:grid-cols-5 mobile-client-grid gap-6">
+                    <div class="grid grid-cols-2 md:grid-cols-5 gap-12 lg:gap-6">
 
                         <!-- Video Item 1 -->
                         <div class="relative group cursor-pointer">
-                            <svg class="absolute -top-20 -right-10 transform z-[100]" width="100" height="100"
+                            <svg class="absolute -top-[40px] -right-[30px] transform z-[100] animate-spin-slow" width="80" height="80"
                                 viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="50" cy="50" r="40" fill="transparent" />
                                 <text fill="#c8b896" font-size="8" font-family="Arial">
@@ -764,7 +778,7 @@
 
                         <!-- Video Item 2 -->
                         <div class="relative group cursor-pointer">
-                            <svg class="absolute -top-20 -right-10 transform z-[100]" width="100" height="100"
+                            <svg class="absolute -top-[40px] -right-[30px] transform z-[100] animate-spin-slow" width="80" height="80"
                                 viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="50" cy="50" r="40" fill="transparent" />
                                 <text fill="#c8b896" font-size="8" font-family="Arial">
@@ -790,7 +804,7 @@
 
                         <!-- Video Item 3 -->
                         <div class="relative group cursor-pointer">
-                            <svg class="absolute -top-20 -right-10 transform z-[100]" width="100" height="100"
+                            <svg class="absolute -top-[40px] -right-[30px] transform z-[100] animate-spin-slow" width="80" height="80"
                                 viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="50" cy="50" r="40" fill="transparent" />
                                 <text fill="#c8b896" font-size="8" font-family="Arial">
@@ -815,7 +829,7 @@
 
                         <!-- Video Item 4 -->
                         <div class="relative group cursor-pointer">
-                            <svg class="absolute -top-20 -right-10 transform z-[100]" width="100" height="100"
+                            <svg class="absolute -top-[40px] -right-[30px] transform z-[100] animate-spin-slow" width="80" height="80"
                                 viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="50" cy="50" r="40" fill="transparent" />
                                 <text fill="#c8b896" font-size="8" font-family="Arial">
@@ -848,7 +862,7 @@
                                     posting, and captions.
                                 </p>
                                 <img src="./assets/images/e86a6961-d682-4d18-ab92-d8f927000cb7.png"
-                                    class="h-[40px] ml-6 mt-6" alt="">
+                                    class="h-[40px] ml-6 mt-6 hidden lg:block" alt="">
                             </div>
                         </div>
                     </div>
@@ -857,7 +871,7 @@
                     <div class="flex justify-between items-end mt-8">
                         <div>
                             <p
-                                class="lg:text-[34px] text-[#a2c4e0] mb-8 font-light italic font-cotoris tracking-[10px]">
+                                class="lg:text-[34px] text-[#a2c4e0] lg:mb-8 font-light italic font-cotoris tracking-[10px]">
                                 click on image to watch on Instagram
                             </p>
                         </div>
@@ -873,7 +887,7 @@
             <div class="flex flex-col lg:flex-row items-center lg:items-start gap-12">
 
                 <!-- Vertical Title -->
-                <div class="flex-shrink-0 lg:w-32 flex items-center justify-center self-stretch">
+                <div class="flex-shrink-0 lg:w-32 flex items-center justify-center lg:items-start lg:justify-end self-stretch">
                     <h2
                         class="text-5xl sm:text-6xl mobile-vertical-title font-light text-[#d4cfb1] tracking-widest [writing-mode:vertical-rl] transform rotate-180 whitespace-nowrap">
                         CLIENT WORK
@@ -882,13 +896,12 @@
 
                 <!-- Main Content -->
                 <div class="flex-grow">
-                    <div class="grid grid-cols-2 md:grid-cols-5 gap-6">
+                    <div class="grid grid-cols-2 md:grid-cols-5 gap-12 lg:gap-6">
 
                         <!-- Video Item 1 -->
                         <div class="relative group cursor-pointer">
-                            <svg class="absolute -top-20 -right-10 transform z-[100]" width="100" height="100"
+                            <svg class="absolute -top-[40px] -right-[30px] transform z-[100] animate-spin-slow" width="80" height="80"
                                 viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="50" cy="50" r="40" fill="transparent" />
                                 <text fill="#c8b896" font-size="8" font-family="Arial">
                                     <textPath href="#circle1" startOffset="0" text-anchor="middle">filming · filming ·
                                         filming · filming · filming · filming · filming · filming · filming · filming ·
@@ -911,7 +924,7 @@
 
                         <!-- Video Item 2 -->
                         <div class="relative group cursor-pointer">
-                            <svg class="absolute -top-20 -right-10 transform z-[100]" width="100" height="100"
+                            <svg class="absolute -top-[40px] -right-[30px] transform z-[100] animate-spin-slow" width="80" height="80"
                                 viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="50" cy="50" r="40" fill="transparent" />
                                 <text fill="#c8b896" font-size="8" font-family="Arial">
@@ -937,7 +950,7 @@
 
                         <!-- Video Item 3 -->
                         <div class="relative group cursor-pointer">
-                            <svg class="absolute -top-20 -right-10 transform z-[100]" width="100" height="100"
+                            <svg class="absolute -top-[40px] -right-[30px] transform z-[100] animate-spin-slow" width="80" height="80"
                                 viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="50" cy="50" r="40" fill="transparent" />
                                 <text fill="#c8b896" font-size="8" font-family="Arial">
@@ -970,7 +983,7 @@
                                     posting, and captions.
                                 </p>
                                 <img src="./assets/images/e86a6961-d682-4d18-ab92-d8f927000cb7.png"
-                                    class="h-[40px] ml-6 mt-6" alt="">
+                                    class="h-[40px] ml-6 mt-6 hidden lg:block" alt="">
                             </div>
                         </div>
                     </div>
@@ -1005,7 +1018,7 @@
             <div class="flex flex-col lg:flex-row items-center lg:items-start gap-12">
                 <!-- Main Content -->
                 <div class="flex-grow">
-                    <div class="grid grid-cols-2 md:grid-cols-5 mobile-client-grid gap-6">
+                    <div class="grid grid-cols-2 md:grid-cols-5 gap-12 lg:gap-6">
                         <!-- Bottom Text -->
                         <div class="flex justify-between items-start mt-1 lg:mt-[50%]">
                             <div class="text-left relative">
@@ -1016,13 +1029,13 @@
                                     posting
                                 </p>
                                 <img src="./assets/images/2253489e-24d7-483a-8bcb-95b3b8f1770b.png"
-                                    class="h-[40px] ml-auto" alt="">
+                                    class="h-[40px] hidden lg:block ml-auto" alt="">
                             </div>
                         </div>
 
                         <!-- Video Item 1 -->
                         <div class="relative group cursor-pointer">
-                            <svg class="absolute -top-20 -right-10 transform z-[100]" width="100" height="100"
+                            <svg class="absolute -top-[40px] -right-[30px] transform z-[100] animate-spin-slow" width="80" height="80"
                                 viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="50" cy="50" r="40" fill="transparent" />
                                 <text fill="#c8b896" font-size="8" font-family="Arial">
@@ -1047,7 +1060,7 @@
 
                         <!-- Video Item 2 -->
                         <div class="relative group cursor-pointer">
-                            <svg class="absolute -top-20 -right-10 transform z-[100]" width="100" height="100"
+                            <svg class="absolute -top-[40px] -right-[30px] transform z-[100] animate-spin-slow" width="80" height="80"
                                 viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="50" cy="50" r="40" fill="transparent" />
                                 <text fill="#c8b896" font-size="8" font-family="Arial">
@@ -1073,7 +1086,7 @@
 
                         <!-- Video Item 3 -->
                         <div class="relative group cursor-pointer">
-                            <svg class="absolute -top-20 -right-10 transform z-[100]" width="100" height="100"
+                            <svg class="absolute -top-[40px] -right-[30px] transform z-[100] animate-spin-slow" width="80" height="80"
                                 viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="50" cy="50" r="40" fill="transparent" />
                                 <text fill="#c8b896" font-size="8" font-family="Arial">
@@ -1098,7 +1111,7 @@
 
                         <!-- Video Item 4 -->
                         <div class="relative group cursor-pointer">
-                            <svg class="absolute -top-20 -right-10 transform z-[100]" width="100" height="100"
+                            <svg class="absolute -top-[40px] -right-[30px] transform z-[100] animate-spin-slow" width="80" height="80"
                                 viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="50" cy="50" r="40" fill="transparent" />
                                 <text fill="#c8b896" font-size="8" font-family="Arial">
