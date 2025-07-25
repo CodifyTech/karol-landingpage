@@ -118,11 +118,12 @@
             animation: spin 10s linear infinite;
             transform-origin: 50% 50%;
         }
-        
+
         @keyframes spin {
             0% {
                 transform: rotate(0deg);
             }
+
             100% {
                 transform: rotate(360deg);
             }
@@ -298,19 +299,71 @@
             .font-handwriting {
                 font-size: 0.7rem !important;
             }
+
+            /* Mobile menu adjustments */
+            .mobile-menu-nav {
+                right: 1rem !important;
+                top: 1rem !important;
+                transform: none !important;
+            }
+
+            .mobile-brand {
+                font-size: 1.2rem !important;
+                padding: 1rem !important;
+            }
+
+            .mobile-hero-height {
+                height: 100vh !important;
+            }
+        }
+
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Dropdown animation */
+        .dropdown-enter {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        .dropdown-enter-active {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.3s ease, transform 0.3s ease;
         }
     </style>
 </head>
 
-<body class="bg-gradient-custom hero-pattern min-h-screen overflow-x-hidden">
+<body class="bg-gradient-custom hero-pattern h-[50vh] overflow-x-hidden">
     <!-- Hero Section -->
-    <main class="hero-background relative z-10 flex items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8">
+    <main id="hero" class="bg-[#fef9ff] relative z-10 flex items-center justify-center h-[50vh] px-4 sm:px-6 lg:px-8">
+        <!-- Navigation Dropdown - Right Side -->
+        <nav class="absolute right-6 top-[10%] transform -translate-y-1/2 z-50">
+            <div class="relative">
+                <button id="menu-button"
+                    class="text-white text-dark pa-2 font-cotoris flex items-center gap-2 hover:bg-[#f1eee6] transition-colors duration-300">
+                    <img src="./assets/images/menu.svg" alt="Menu Icon">
+                </button>
+
+                <div id="dropdown-menu" class="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-xl py-2 hidden">
+                    <a href="#about"
+                        class="block px-4 py-2 text-[#c09569] hover:bg-[#f4f5f0] transition-colors duration-200 font-cotoris">About
+                        me</a>
+                    <a href="#services"
+                        class="block px-4 py-2 text-[#c09569] hover:bg-[#f4f5f0] transition-colors duration-200 font-cotoris">Service</a>
+                    <a href="#client-work"
+                        class="block px-4 py-2 text-[#c09569] hover:bg-[#f4f5f0] transition-colors duration-200 font-cotoris">Portfolio</a>
+                    <a href="#contact"
+                        class="block px-4 py-2 text-[#c09569] hover:bg-[#f4f5f0] transition-colors duration-200 font-cotoris">Contact</a>
+                </div>
+            </div>
+        </nav>
+
         <div class="max-w-4xl mx-auto text-center animate-fade-in">
             <!-- Portfolio Title -->
-            <h1
-                class="text-[110px] md:text-[110px] text-mobile-portfolio text-center mx-auto text-[#c09569] letter-spacing-wide leading-none text-shadow font-alta">
-                PORTFOLIO
-            </h1>
+            <img src="./assets/images/logo.png" alt="Logo" class="h-[110px] mx-auto mb-4" />
 
             <!-- Subtitle -->
             <p
@@ -321,9 +374,10 @@
     </main>
 
     <!-- About Me Section -->
-    <section id="about" class="relative z-10 py-20 bg-[#f4f5f0] bg-opacity-60">
+    <section id="about" class="relative z-10 py-12 bg-[#f4f5f0] bg-opacity-60">
         <div class="max-w-7xl mx-auto">
-            <div class="flex flex-col sm:grid p-2 sm:p-10 sm:grid-cols-3 gap-12 items-stretch" style="align-items: stretch;">
+            <div class="flex flex-col sm:grid p-2 sm:p-10 sm:grid-cols-3 gap-12 items-stretch"
+                style="align-items: stretch;">
                 <!-- Image -->
                 <div class="relative h-[500px] mobile-about-image flex items-stretch">
                     <img src="./assets/images/f41a6aaf28b3a22804c2fbef651599b0.jpg"
@@ -341,7 +395,8 @@
 
                     <div class="space-y-6 text-[#c09569] font-cotoris text-lg leading-relaxed">
                         <p>
-                            I am a communication and branding professional with a degree in Marketing and over 4 years
+                            My name is Karol, I am a communication and branding professional with a degree in Marketing
+                            and over 4 years
                             of experience with most of my background in food service. I create and implement strategies
                             to build strong visual and verbal brand identities.
                         </p>
@@ -352,8 +407,8 @@
                         </p>
 
                         <p>
-                            One of the biggest accounts I have managed was <a href="https://www.instagram.com/ofner" target="_blank"
-                                class="text-amber-600 font-medium">@Ofner</a> (+180k followers).
+                            One of the biggest accounts I have managed was <a href="https://www.instagram.com/ofner"
+                                target="_blank" class="text-amber-600 font-medium">@Ofner</a> (+180k followers).
                         </p>
 
                         <p>
@@ -372,46 +427,34 @@
             <div class="grid lg:grid-cols-2 mobile-services-grid gap-16 items-center">
 
                 <!-- Left side - Polaroid Images -->
-                <div class="relative flex justify-center lg:justify-start">
+                <div class="relative lg:flex justify-center hidden">
                     <div class="grid grid-cols-2 gap-8 max-w-lg">
                         <!-- Polaroid 1 - Top Left -->
                         <div
                             class="polaroid mobile-polaroid bg-white p-3 transform -rotate-3 shadow-xl hover:shadow-2xl transition-all duration-300 hover:z-50 relative z-40">
-                            <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-                                alt="Social media workspace" class="w-full h-40 object-cover rounded-sm" />
-                            <div class="mt-3 text-center text-sm text-gray-600 font-handwriting">
-                                content creation
-                            </div>
+                            <img src="./assets/images/IMG-20250725-WA0013.jpg" alt="Social media workspace"
+                                class="w-full h-40 object-cover rounded-sm" />
                         </div>
 
                         <!-- Polaroid 2 - Top Right -->
                         <div
                             class="polaroid mobile-polaroid bg-white p-3 transform rotate-2 shadow-xl hover:shadow-2xl transition-all duration-300 hover:z-50 relative z-30 -mt-6">
-                            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-                                alt="Business planning" class="w-full h-40 object-cover rounded-sm" />
-                            <div class="mt-3 text-center text-sm text-gray-600 font-handwriting">
-                                strategy planning
-                            </div>
+                            <img src="./assets/images/IMG-20250725-WA0014.jpg" alt="Business planning"
+                                class="w-full h-40 object-cover rounded-sm" />
                         </div>
 
                         <!-- Polaroid 3 - Bottom Left -->
                         <div
                             class="polaroid mobile-polaroid bg-white p-3 transform rotate-1 shadow-xl hover:shadow-2xl transition-all duration-300 hover:z-50 relative z-20 -mt-8 ml-4">
-                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-                                alt="Analytics dashboard" class="w-full h-40 object-cover rounded-sm" />
-                            <div class="mt-3 text-center text-sm text-gray-600 font-handwriting">
-                                analytics & growth
-                            </div>
+                            <img src="./assets/images/IMG-20250725-WA0015.jpg" alt="Analytics dashboard"
+                                class="w-full h-40 object-cover rounded-sm" />
                         </div>
 
                         <!-- Polaroid 4 - Bottom Right -->
                         <div
                             class="polaroid mobile-polaroid bg-white p-3 transform -rotate-2 shadow-xl hover:shadow-2xl transition-all duration-300 hover:z-50 relative z-10 -mt-12 -ml-2">
-                            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-                                alt="Creative workspace" class="w-full h-40 object-cover rounded-sm" />
-                            <div class="mt-3 text-center text-sm text-gray-600 font-handwriting">
-                                brand development
-                            </div>
+                            <img src="./assets/images/IMG-20250725-WA0016.jpg" alt="Creative workspace"
+                                class="w-full h-40 object-cover rounded-sm" />
                         </div>
                     </div>
                 </div>
@@ -450,19 +493,17 @@
     </section>
 
     <!-- Brands Section -->
-    <section class="relative z-10 py-20 bg-[#fef9ff]">
+    <section id="client-work" class="relative z-10 py-12 bg-[#fef9ff]">
         <div class="max-w-7xl mx-auto px-4">
             <div class="grid lg:grid-cols-2 gap-12 items-start">
                 <!-- Instagram Profiles Grid -->
                 <div class="lg:col-span-2 grid grid-cols-2 gap-2 lg:gap-10">
                     <!-- Section Title -->
-                    <div class="flex justify-center flex-col col-span-2 lg:col-span-1 ml-0 lg:ml-2">
-                        <h2
-                            class="text-[100px] md:text-[100px] text-[clamp(3rem,15vw,6rem)] text-[#d4cfb1] leading-none font-alta">
+                    <div class="flex flex-col col-span-2 lg:col-span-1 ml-0 lg:ml-2 mt-2">
+                        <h2 class="text-[72px] text-[#d4cfb1] leading-none font-alta">
                             BRANDS
                         </h2>
-                        <span
-                            class="text-[#c09569] font-cotoris text-[50px] md:text-[50px] text-[clamp(1.5rem,8vw,3rem)]">I
+                        <span class="text-[#c09569] font-cotoris text-[50px]">I
                             have worked
                             with</span>
                     </div>
@@ -517,9 +558,10 @@
                             </div>
                             <div class="flex-1">
                                 <div class="flex justify-between items-center mb-3">
-                                <h3 class="text-[8px] lg:text-sm font-semibold text-gray-800">restaurantearabia</h3>
+                                    <h3 class="text-[8px] lg:text-sm font-semibold text-gray-800">restaurantearabia</h3>
                                     <div class="flex justify-between items-center gap-2">
-                                        <button class="text-[8px] lg:text-sm bg-blue-500 text-white px-4 py-1 rounded font-medium">Follow</button>
+                                        <button
+                                            class="text-[8px] lg:text-sm bg-blue-500 text-white px-4 py-1 rounded font-medium">Follow</button>
                                     </div>
                                 </div>
                                 <div class="text-center mb-4">
@@ -554,7 +596,8 @@
                                 <div class="flex justify-between items-center mb-3">
                                     <h3 class="text-[8px] lg:text-sm font-semibold text-gray-800">amatime_br</h3>
                                     <div class="flex justify-between items-center gap-2">
-                                        <button class="text-[8px] lg:text-sm bg-blue-500 text-white px-4 py-1 rounded font-medium">Follow</button>
+                                        <button
+                                            class="text-[8px] lg:text-sm bg-blue-500 text-white px-4 py-1 rounded font-medium">Follow</button>
                                     </div>
                                 </div>
                                 <div class="text-center mb-4">
@@ -697,7 +740,8 @@
                             </div>
                             <div class="flex-1">
                                 <div class="flex justify-between items-center mb-3">
-                                    <h3 class="text-[8px] lg:text-sm font-semibold text-gray-800">djapa_moema_oficial</h3>
+                                    <h3 class="text-[8px] lg:text-sm font-semibold text-gray-800">djapa_moema_oficial
+                                    </h3>
                                     <div class="flex justify-between items-center gap-2">
                                         <button
                                             class="bg-blue-500 text-white px-4 py-1 rounded text-[8px] lg:text-sm font-medium">Follow</button>
@@ -725,7 +769,7 @@
 
             <!-- Call to Action -->
             <div class="text-center mt-16">
-                <p class="lg:text-[34px] text-[#a2c4e0] mb-2 lg:mb-8 font-light italic font-cotoris tracking-[10px]">
+                <p class="text-[14px] text-[#a2c4e0] mb-2 lg:mb-8 font-light italic font-cotoris tracking-[10px]">
                     click on image to see on Instagram
                 </p>
             </div>
@@ -733,28 +777,27 @@
     </section>
 
     <!-- Client Work Section 1 -->
-    <section class="relative z-10 pb-20 pt-40 mobile-client-work bg-[#f4f5f0] overflow-hidden">
+    <section class="relative z-10 py-12 mobile-client-work bg-[#f4f5f0] overflow-hidden">
         <div class="max-w-7xl mx-auto px-4">
+            <!-- Vertical Title -->
+            <div class="flex justify-center">
+                <h2 class="text-[72px] text-[clamp(3rem,15vw,6rem)] text-[#d4cfb1] leading-none font-alta mb-[50px]">
+                    CLIENT WORK
+                </h2>
+            </div>
+
             <div class="flex flex-col lg:flex-row items-center lg:items-start gap-12">
-
-                <!-- Vertical Title -->
-                <div class="flex-shrink-0 lg:w-32 flex items-center justify-center lg:items-start lg:justify-end self-stretch">
-                    <h2
-                        class="text-5xl sm:text-6xl mobile-vertical-title font-light text-[#d4cfb1] tracking-widest [writing-mode:vertical-rl] transform rotate-180 whitespace-nowrap">
-                        CLIENT WORK
-                    </h2>
-                </div>
-
                 <!-- Main Content -->
                 <div class="flex-grow">
-                    <div class="grid grid-cols-2 md:grid-cols-5 gap-12 lg:gap-6">
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-12">
 
                         <!-- Video Item 1 -->
                         <div class="relative group cursor-pointer">
-                            <svg class="absolute -top-[25px] -right-[20px] lg:-top-[40px] lg:-right-[30px] transform z-[100] animate-spin-slow h-[50px] w-[50px] lg:h-[80px] lg:w-[80px]" width="80" height="80"
-                                viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg class="absolute -top-[25px] -right-[20px] lg:-top-[40px] lg:-right-[18px] transform z-[100] animate-spin-slow h-[50px] w-[50px] lg:h-[80px] lg:w-[80px]"
+                                width="80" height="80" viewBox="0 0 100 100" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="50" cy="50" r="40" fill="transparent" />
-                                <text fill="#a2c4e0" font-size="8" font-family="Arial">
+                                <text fill="#a2c4e0" font-size="11" font-family="Arial">
                                     <textPath href="#circle1" startOffset="0" text-anchor="middle">filming · filming ·
                                         filming · filming · filming · filming · filming · filming · filming · filming ·
                                         filming · filming · filming · filming · filming · filming ·</textPath>
@@ -776,10 +819,11 @@
 
                         <!-- Video Item 2 -->
                         <div class="relative group cursor-pointer">
-                            <svg class="absolute -top-[25px] -right-[20px] lg:-top-[40px] lg:-right-[30px] transform z-[100] animate-spin-slow h-[50px] w-[50px] lg:h-[80px] lg:w-[80px]" width="80" height="80"
-                                viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg class="absolute -top-[25px] -right-[20px] lg:-top-[40px] lg:-right-[18px] transform z-[100] animate-spin-slow h-[50px] w-[50px] lg:h-[80px] lg:w-[80px]"
+                                width="80" height="80" viewBox="0 0 100 100" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="50" cy="50" r="40" fill="transparent" />
-                                <text fill="#a2c4e0" font-size="8" font-family="Arial">
+                                <text fill="#a2c4e0" font-size="11" font-family="Arial">
                                     <textPath href="#circle2" startOffset="0" text-anchor="middle">content creation ·
                                         content creation · content creation · content creation · content creation ·
                                         content creation · content creation · content creation · content creation ·
@@ -802,10 +846,11 @@
 
                         <!-- Video Item 3 -->
                         <div class="relative group cursor-pointer">
-                            <svg class="absolute -top-[25px] -right-[20px] lg:-top-[40px] lg:-right-[30px] transform z-[100] animate-spin-slow h-[50px] w-[50px] lg:h-[80px] lg:w-[80px]" width="80" height="80"
-                                viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg class="absolute -top-[25px] -right-[20px] lg:-top-[40px] lg:-right-[18px] transform z-[100] animate-spin-slow h-[50px] w-[50px] lg:h-[80px] lg:w-[80px]"
+                                width="80" height="80" viewBox="0 0 100 100" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="50" cy="50" r="40" fill="transparent" />
-                                <text fill="#a2c4e0" font-size="8" font-family="Arial">
+                                <text fill="#a2c4e0" font-size="11" font-family="Arial">
                                     <textPath href="#circle3" startOffset="0" text-anchor="middle">editing · editing ·
                                         editing · editing · editing · editing · editing · editing · editing · editing ·
                                         editing · editing · editing · editing · editing · editing ·</textPath>
@@ -827,10 +872,11 @@
 
                         <!-- Video Item 4 -->
                         <div class="relative group cursor-pointer">
-                            <svg class="absolute -top-[25px] -right-[20px] lg:-top-[40px] lg:-right-[30px] transform z-[100] animate-spin-slow h-[50px] w-[50px] lg:h-[80px] lg:w-[80px]" width="80" height="80"
-                                viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg class="absolute -top-[25px] -right-[20px] lg:-top-[40px] lg:-right-[18px] transform z-[100] animate-spin-slow h-[50px] w-[50px] lg:h-[80px] lg:w-[80px]"
+                                width="80" height="80" viewBox="0 0 100 100" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="50" cy="50" r="40" fill="transparent" />
-                                <text fill="#a2c4e0" font-size="8" font-family="Arial">
+                                <text fill="#a2c4e0" font-size="11" font-family="Arial">
                                     <textPath href="#circle4" startOffset="0" text-anchor="middle">content creation ·
                                         content creation · content creation · content creation · content creation ·
                                         content creation · content creation · content creation · content creation ·
@@ -851,56 +897,12 @@
                             </div>
                         </div>
 
-                        <!-- Bottom Text -->
-                        <div class="flex justify-between items-start mt-1 col-span-2 lg:col-span-1 lg:mt-[50%]">
-                            <div class="flex lg:block text-right relative">
-                                <p class="text-[15px] text-[#c8b896] text-left font-light italic leading-relaxed">
-                                    Videos created from scratch<br>
-                                    — scripting, filming, editing,<br>
-                                    posting, and captions.
-                                </p>
-                                <img src="./assets/images/e86a6961-d682-4d18-ab92-d8f927000cb7.png"
-                                    class="h-[40px] ml-6 mt-6" alt="">
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Bottom Text -->
-                    <div class="flex justify-between items-end mt-8">
-                        <div>
-                            <p
-                                class="lg:text-[34px] text-[#a2c4e0] mb-2 lg:mb-8 font-light italic font-cotoris tracking-[10px] text-center lg:text-start">
-                                click on image to watch on Instagram
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Client Work Section 2 -->
-    <section class="relative z-10 py-20 bg-[#f4f5f0] overflow-hidden">
-        <div class="max-w-7xl mx-auto">
-            <div class="flex flex-col lg:flex-row items-center lg:items-start gap-12">
-
-                <!-- Vertical Title -->
-                <div class="flex-shrink-0 lg:w-32 flex items-center justify-center lg:items-start lg:justify-end self-stretch">
-                    <h2
-                        class="text-5xl sm:text-6xl mobile-vertical-title font-light text-[#d4cfb1] tracking-widest [writing-mode:vertical-rl] transform rotate-180 whitespace-nowrap">
-                        CLIENT WORK
-                    </h2>
-                </div>
-
-                <!-- Main Content -->
-                <div class="flex-grow">
-                    <div class="grid grid-cols-2 md:grid-cols-5 gap-12 lg:gap-6">
-
-                        <!-- Video Item 1 -->
+                        <!-- Video Item 5 -->
                         <div class="relative group cursor-pointer">
-                            <svg class="absolute -top-[25px] -right-[20px] lg:-top-[40px] lg:-right-[30px] transform z-[100] animate-spin-slow h-[50px] w-[50px] lg:h-[80px] lg:w-[80px]" width="80" height="80"
-                                viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <text fill="#a2c4e0" font-size="8" font-family="Arial">
+                            <svg class="absolute -top-[25px] -right-[20px] lg:-top-[40px] lg:-right-[18px] transform z-[100] animate-spin-slow h-[50px] w-[50px] lg:h-[80px] lg:w-[80px]"
+                                width="80" height="80" viewBox="0 0 100 100" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <text fill="#a2c4e0" font-size="11" font-family="Arial">
                                     <textPath href="#circle1" startOffset="0" text-anchor="middle">filming · filming ·
                                         filming · filming · filming · filming · filming · filming · filming · filming ·
                                         filming · filming · filming · filming · filming · filming ·</textPath>
@@ -922,10 +924,11 @@
 
                         <!-- Video Item 2 -->
                         <div class="relative group cursor-pointer">
-                            <svg class="absolute -top-[25px] -right-[20px] lg:-top-[40px] lg:-right-[30px] transform z-[100] animate-spin-slow h-[50px] w-[50px] lg:h-[80px] lg:w-[80px]" width="80" height="80"
-                                viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg class="absolute -top-[25px] -right-[20px] lg:-top-[40px] lg:-right-[18px] transform z-[100] animate-spin-slow h-[50px] w-[50px] lg:h-[80px] lg:w-[80px]"
+                                width="80" height="80" viewBox="0 0 100 100" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="50" cy="50" r="40" fill="transparent" />
-                                <text fill="#a2c4e0" font-size="8" font-family="Arial">
+                                <text fill="#a2c4e0" font-size="11" font-family="Arial">
                                     <textPath href="#circle2" startOffset="0" text-anchor="middle">content creation ·
                                         content creation · content creation · content creation · content creation ·
                                         content creation · content creation · content creation · content creation ·
@@ -948,10 +951,11 @@
 
                         <!-- Video Item 3 -->
                         <div class="relative group cursor-pointer">
-                            <svg class="absolute -top-[25px] -right-[20px] lg:-top-[40px] lg:-right-[30px] transform z-[100] animate-spin-slow h-[50px] w-[50px] lg:h-[80px] lg:w-[80px]" width="80" height="80"
-                                viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg class="absolute -top-[25px] -right-[20px] lg:-top-[40px] lg:-right-[18px] transform z-[100] animate-spin-slow h-[50px] w-[50px] lg:h-[80px] lg:w-[80px]"
+                                width="80" height="80" viewBox="0 0 100 100" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="50" cy="50" r="40" fill="transparent" />
-                                <text fill="#a2c4e0" font-size="8" font-family="Arial">
+                                <text fill="#a2c4e0" font-size="11" font-family="Arial">
                                     <textPath href="#circle4" startOffset="0" text-anchor="middle">content creation ·
                                         content creation · content creation · content creation · content creation ·
                                         content creation · content creation · content creation · content creation ·
@@ -972,9 +976,10 @@
                             </div>
                         </div>
 
+
                         <!-- Bottom Text -->
-                        <div class="flex justify-between items-start mt-1 lg:mt-[50%]">
-                            <div class="text-right relative">
+                        <div class="flex justify-between items-start mt-1 col-span-2 lg:col-span-1 lg:mt-[50%]">
+                            <div class="flex lg:block text-right relative">
                                 <p class="text-[15px] text-[#c8b896] text-left font-light italic leading-relaxed">
                                     Videos created from scratch<br>
                                     — scripting, filming, editing,<br>
@@ -990,7 +995,7 @@
                     <div class="flex justify-between items-end mt-8">
                         <div>
                             <p
-                                class="lg:text-[34px] text-[#a2c4e0] mb-2 lg:mb-8 font-light italic font-cotoris tracking-[10px] text-center lg:text-start">
+                                class="text-[14px] text-[#a2c4e0] mb-2 lg:mb-8 font-light italic font-cotoris tracking-[10px] text-center lg:text-start">
                                 click on image to watch on Instagram
                             </p>
                         </div>
@@ -1001,15 +1006,15 @@
     </section>
 
     <!-- Influencers Section -->
-    <section class="relative z-10 py-5 lg:py-20 bg-[#f5f1e6] overflow-hidden">
+    <section class="relative z-10 py-12 bg-[#f5f1e6] overflow-hidden">
         <div class="max-w-7xl mx-auto px-4">
             <!-- Section Title -->
-            <div class="flex justify-center flex-col lg:col-span-1 mb-4 lg:mb-[100px]">
+            <div class="flex justify-center flex-col lg:col-span-1 mb-4 lg:mb-[50px]">
                 <h2
                     class="text-5xl sm:text-6xl lg:text-7xl mobile-influencer-title font-light text-[#a2c4e0] leadng-tight letter-spacing-wide font-alta">
                     Influencers
                 </h2>
-                <span class="text-[#e8d2b8] text-4xl sm:text-5xl lg:text-6xl mobile-influencer-subtitle font-cotoris">I
+                <span class="text-[#e8d2b8] text-[50px] mobile-influencer-subtitle font-cotoris">I
                     have worked with</span>
             </div>
 
@@ -1033,10 +1038,11 @@
 
                         <!-- Video Item 1 -->
                         <div class="relative group cursor-pointer">
-                            <svg class="absolute -top-[25px] -right-[20px] lg:-top-[40px] lg:-right-[30px] transform z-[100] animate-spin-slow h-[50px] w-[50px] lg:h-[80px] lg:w-[80px]" width="80" height="80"
-                                viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg class="absolute -top-[25px] -right-[20px] lg:-top-[40px] lg:-right-[18px] transform z-[100] animate-spin-slow h-[50px] w-[50px] lg:h-[80px] lg:w-[80px]"
+                                width="80" height="80" viewBox="0 0 100 100" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="50" cy="50" r="40" fill="transparent" />
-                                <text fill="#a2c4e0" font-size="8" font-family="Arial">
+                                <text fill="#a2c4e0" font-size="11" font-family="Arial">
                                     <textPath href="#circle1" startOffset="0" text-anchor="middle">filming · filming ·
                                         filming · filming · filming · filming · filming · filming · filming · filming ·
                                         filming · filming · filming · filming · filming · filming ·</textPath>
@@ -1058,10 +1064,11 @@
 
                         <!-- Video Item 2 -->
                         <div class="relative group cursor-pointer">
-                            <svg class="absolute -top-[25px] -right-[20px] lg:-top-[40px] lg:-right-[30px] transform z-[100] animate-spin-slow h-[50px] w-[50px] lg:h-[80px] lg:w-[80px]" width="80" height="80"
-                                viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg class="absolute -top-[25px] -right-[20px] lg:-top-[40px] lg:-right-[18px] transform z-[100] animate-spin-slow h-[50px] w-[50px] lg:h-[80px] lg:w-[80px]"
+                                width="80" height="80" viewBox="0 0 100 100" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="50" cy="50" r="40" fill="transparent" />
-                                <text fill="#a2c4e0" font-size="8" font-family="Arial">
+                                <text fill="#a2c4e0" font-size="11" font-family="Arial">
                                     <textPath href="#circle2" startOffset="0" text-anchor="middle">content creation ·
                                         content creation · content creation · content creation · content creation ·
                                         content creation · content creation · content creation · content creation ·
@@ -1084,10 +1091,11 @@
 
                         <!-- Video Item 3 -->
                         <div class="relative group cursor-pointer">
-                            <svg class="absolute -top-[25px] -right-[20px] lg:-top-[40px] lg:-right-[30px] transform z-[100] animate-spin-slow h-[50px] w-[50px] lg:h-[80px] lg:w-[80px]" width="80" height="80"
-                                viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg class="absolute -top-[25px] -right-[20px] lg:-top-[40px] lg:-right-[18px] transform z-[100] animate-spin-slow h-[50px] w-[50px] lg:h-[80px] lg:w-[80px]"
+                                width="80" height="80" viewBox="0 0 100 100" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="50" cy="50" r="40" fill="transparent" />
-                                <text fill="#a2c4e0" font-size="8" font-family="Arial">
+                                <text fill="#a2c4e0" font-size="11" font-family="Arial">
                                     <textPath href="#circle3" startOffset="0" text-anchor="middle">editing · editing ·
                                         editing · editing · editing · editing · editing · editing · editing · editing ·
                                         editing · editing · editing · editing · editing · editing ·</textPath>
@@ -1109,10 +1117,10 @@
 
                         <!-- Video Item 4 -->
                         <div class="relative group cursor-pointer">
-                            <svg class="absolute -top-[25px] -right-[20px] lg:-top-[40px] lg:-right-[30px] transform z-[100] animate-spin-slow h-[50px] w-[50px] lg:h-[80px] lg:w-[80px]"
+                            <svg class="absolute -top-[25px] -right-[20px] lg:-top-[40px] lg:-right-[18px] transform z-[100] animate-spin-slow h-[50px] w-[50px] lg:h-[80px] lg:w-[80px]"
                                 viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="50" cy="50" r="40" fill="transparent" />
-                                <text fill="#a2c4e0" font-size="8" font-family="Arial">
+                                <text fill="#a2c4e0" font-size="11" font-family="Arial">
                                     <textPath href="#circle4" startOffset="0" text-anchor="middle">content creation ·
                                         content creation · content creation · content creation · content creation ·
                                         content creation · content creation · content creation · content creation ·
@@ -1132,15 +1140,15 @@
                                 </a>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Bottom Text -->
-                    <div class="flex justify-between items-end mt-8">
-                        <div>
-                            <p
-                                class="lg:text-[34px] text-[#a2c4e0] mb-2 lg:mb-8 font-light italic font-cotoris tracking-[10px] text-center lg:text-start">
-                                click on image to watch on Instagram
-                            </p>
+                        <!-- Bottom Text -->
+                        <div class="flex items-end mt-8 col-start-2 col-span-4">
+                            <div>
+                                <p
+                                    class="text-[14px] text-[#a2c4e0] mb-2 lg:mb-8 font-light italic font-cotoris tracking-[10px] text-center lg:text-start">
+                                    click on image to watch on Instagram
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1149,7 +1157,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="bg-[#f0ede5] py-0 min-h-screen relative">
+    <section id="contact" class="bg-[#f0ede5] py-0 min-h-screen relative">
         <div class="h-screen grid lg:grid-cols-2 mobile-contact-grid gap-0">
             <!-- Left Side - Image/Photo -->
             <div class="relative bg-[#f0ede5] mobile-contact-image flex items-center justify-center">
@@ -1163,9 +1171,12 @@
                     <!-- Title -->
                     <div class="mb-16">
                         <h2
-                            class="text-6xl lg:text-7xl xl:text-8xl mobile-contact-title text-black tracking-tight leading-none font-playfair">
-                            LET'S<br>CONTACT
+                            class="text-5xl sm:text-6xl lg:text-7xl mobile-influencer-title font-light text-[#a2c4e0] leadng-tight letter-spacing-wide font-alta">
+                            LET'S
                         </h2>
+                        <span
+                            class="text-5xl sm:text-6xl lg:text-7xl mobile-influencer-title font-light text-[#a2c4e0] leadng-tight letter-spacing-wide font-alta">
+                            CONTACT</span>
                     </div>
 
                     <!-- Contact Information -->
@@ -1247,11 +1258,65 @@
             observer.observe(section);
         });
 
-        // Form submission
-        document.querySelector('form').addEventListener('submit', function (e) {
-            e.preventDefault();
-            alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
-            this.reset();
+        // Dropdown menu functionality
+        const menuButton = document.getElementById('menu-button');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+        const menuArrow = document.getElementById('menu-arrow');
+
+        menuButton.addEventListener('click', function () {
+            const isHidden = dropdownMenu.classList.contains('hidden');
+
+            if (isHidden) {
+                dropdownMenu.classList.remove('hidden');
+                dropdownMenu.classList.add('dropdown-enter');
+                setTimeout(() => {
+                    dropdownMenu.classList.add('dropdown-enter-active');
+                }, 10);
+                menuArrow.style.transform = 'rotate(180deg)';
+            } else {
+                dropdownMenu.classList.remove('dropdown-enter-active');
+                setTimeout(() => {
+                    dropdownMenu.classList.add('hidden');
+                    dropdownMenu.classList.remove('dropdown-enter');
+                }, 300);
+                menuArrow.style.transform = 'rotate(0deg)';
+            }
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function (event) {
+            if (!menuButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                dropdownMenu.classList.remove('dropdown-enter-active');
+                setTimeout(() => {
+                    dropdownMenu.classList.add('hidden');
+                    dropdownMenu.classList.remove('dropdown-enter');
+                }, 300);
+                menuArrow.style.transform = 'rotate(0deg)';
+            }
+        });
+
+        // Smooth scroll for menu links
+        document.querySelectorAll('#dropdown-menu a').forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+
+                // Close dropdown after clicking
+                dropdownMenu.classList.remove('dropdown-enter-active');
+                setTimeout(() => {
+                    dropdownMenu.classList.add('hidden');
+                    dropdownMenu.classList.remove('dropdown-enter');
+                }, 300);
+                menuArrow.style.transform = 'rotate(0deg)';
+            });
         });
     </script>
 </body>
