@@ -109,7 +109,7 @@
         }
 
         .hero-background {
-            background-image: url('./assets/images/background.png');
+            background-image: url('./assets/images/background.jpg');
             background-size: cover;
             background-position: center;
         }
@@ -333,22 +333,244 @@
             transform: translateY(0);
             transition: opacity 0.3s ease, transform 0.3s ease;
         }
+
+        /* Beautiful Effects */
+        @keyframes floatUp {
+            0% {
+                opacity: 0;
+                transform: translateY(100px) scale(0.8);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: -200% 0;
+            }
+
+            100% {
+                background-position: 200% 0;
+            }
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @keyframes pulse-glow {
+
+            0%,
+            100% {
+                box-shadow: 0 0 20px rgba(192, 149, 105, 0.3);
+            }
+
+            50% {
+                box-shadow: 0 0 40px rgba(192, 149, 105, 0.6), 0 0 80px rgba(192, 149, 105, 0.3);
+            }
+        }
+
+        @keyframes sparkle {
+            0% {
+                opacity: 0;
+                transform: scale(0) rotate(0deg);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1) rotate(180deg);
+            }
+
+            100% {
+                opacity: 0;
+                transform: scale(0) rotate(360deg);
+            }
+        }
+
+        .hero-enhanced {
+            background: linear-gradient(-45deg, #fef9ff, #f4f5f0, #fef9ff, #f9f6f1);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .logo-glow {
+            animation: floatUp 1.5s ease-out;
+        }
+
+        .subtitle-shine {
+            background: linear-gradient(90deg, #c09569, #d4a574, #e8c89f, #d4a574, #c09569);
+            background-size: 200% 100%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shimmer 3s ease-in-out infinite;
+        }
+
+        .floating-particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(192, 149, 105, 0.1);
+            border-radius: 50%;
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .particle:nth-child(1) {
+            width: 20px;
+            height: 20px;
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+            animation-duration: 8s;
+        }
+
+        .particle:nth-child(2) {
+            width: 15px;
+            height: 15px;
+            top: 70%;
+            left: 80%;
+            animation-delay: 2s;
+            animation-duration: 10s;
+        }
+
+        .particle:nth-child(3) {
+            width: 25px;
+            height: 25px;
+            top: 40%;
+            left: 90%;
+            animation-delay: 4s;
+            animation-duration: 12s;
+        }
+
+        .particle:nth-child(4) {
+            width: 12px;
+            height: 12px;
+            top: 80%;
+            left: 20%;
+            animation-delay: 1s;
+            animation-duration: 9s;
+        }
+
+        .particle:nth-child(5) {
+            width: 18px;
+            height: 18px;
+            top: 15%;
+            left: 70%;
+            animation-delay: 3s;
+            animation-duration: 11s;
+        }
+
+        .sparkle {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: #d4a574;
+            border-radius: 50%;
+            animation: sparkle 2s ease-in-out infinite;
+        }
+
+        .sparkle:nth-child(1) {
+            top: 25%;
+            left: 15%;
+            animation-delay: 0s;
+        }
+
+        .sparkle:nth-child(2) {
+            top: 60%;
+            left: 85%;
+            animation-delay: 0.5s;
+        }
+
+        .sparkle:nth-child(3) {
+            top: 35%;
+            left: 75%;
+            animation-delay: 1s;
+        }
+
+        .sparkle:nth-child(4) {
+            top: 75%;
+            left: 25%;
+            animation-delay: 1.5s;
+        }
+
+        .menu-button-enhanced {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(192, 149, 105, 0.2);
+            transition: all 0.3s ease;
+            border-radius: 50px;
+        }
+
+        .menu-button-enhanced:hover {
+            background: rgba(192, 149, 105, 0.1);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(192, 149, 105, 0.2);
+        }
+
+        .content-container {
+            backdrop-filter: blur(5px);
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 2rem;
+            border: 1px solid rgba(192, 149, 105, 0.1);
+        }
     </style>
 </head>
 
 <body class="bg-gradient-custom hero-pattern h-[50vh] overflow-x-hidden">
     <!-- Hero Section -->
     <main id="hero"
-        class="hero-background bg-[#fef9ff] relative z-10 flex items-center justify-center h-[50vh] px-4 sm:px-6 lg:px-8">
+        class="hero-background relative z-10 flex items-center justify-center h-[50vh] px-4 sm:px-6 lg:px-8 overflow-hidden">
+
+        <div class="hero-enhanced">
+            <!-- Sparkles -->
+            <div class="sparkle"></div>
+            <div class="sparkle"></div>
+            <div class="sparkle"></div>
+            <div class="sparkle"></div>
+        </div>
+
         <!-- Navigation Dropdown - Right Side -->
         <nav class="absolute right-6 top-[10%] transform -translate-y-1/2 z-50">
             <div class="relative">
                 <button id="menu-button"
-                    class="text-white text-dark pa-2 font-cotoris flex items-center gap-2 hover:bg-[#f1eee6] transition-colors duration-300">
-                    <img src="./assets/images/menu.svg" alt="Menu Icon">
+                    class="menu-button-enhanced text-[#c09569] pa-4 font-cotoris flex items-center gap-2 transition-all duration-300 px-6 py-3">
+                    <img src="./assets/images/menu.svg" alt="Menu Icon" class="w-6 h-6">
                 </button>
 
-                <div id="dropdown-menu" class="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-xl py-2 hidden">
+                <div id="dropdown-menu"
+                    class="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-xl py-2 hidden backdrop-blur-sm border border-white/20">
                     <a href="#about"
                         class="block px-4 py-2 text-[#c09569] hover:bg-[#f4f5f0] transition-colors duration-200 font-cotoris">About
                         me</a>
@@ -362,16 +584,19 @@
             </div>
         </nav>
 
-        <div class="max-w-4xl mx-auto text-center animate-fade-in">
+        <div class="z-10 max-w-4xl mx-auto text-center">
             <!-- Portfolio Title -->
-            <img src="./assets/images/logo.png" alt="Logo" class="h-[110px] mx-auto mb-4" />
+            <img src="./assets/images/logo.png" alt="Logo" class="h-[110px] mx-auto mb-6 logo-glow" />
 
             <!-- Subtitle -->
             <p
-                class="text-[17.8px] md:text-[17.8px] text-mobile-subtitle text-[#c09569] font-cotoris italic leading-relaxed mx-auto">
+                class="text-[17.8px] md:text-[20px] text-mobile-subtitle subtitle-shine font-cotoris italic leading-relaxed mx-auto">
                 helping brands grow and connect with their public through strategic social media content
             </p>
         </div>
+
+        <!-- Gradient Overlay with Blur Effect -->
+        <div class="absolute inset-0 bg-[#000] bg-opacity-50"></div>
     </main>
 
     <!-- About Me Section -->
