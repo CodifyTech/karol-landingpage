@@ -493,35 +493,61 @@
 
         .sparkle {
             position: absolute;
-            width: 8px;
-            height: 8px;
-            background: #d4a574;
-            border-radius: 50%;
-            animation: sparkle 2s ease-in-out infinite;
+            width: 20px;
+            height: 20px;
+            background-image: url('./assets/images/estrelinha.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            animation: sparkle 3s ease-in-out infinite;
         }
 
         .sparkle:nth-child(1) {
             top: 25%;
             left: 15%;
             animation-delay: 0s;
+            width: 16px;
+            height: 16px;
         }
 
         .sparkle:nth-child(2) {
             top: 60%;
             left: 85%;
-            animation-delay: 0.5s;
+            animation-delay: 0.8s;
+            width: 22px;
+            height: 22px;
         }
 
         .sparkle:nth-child(3) {
             top: 35%;
             left: 75%;
-            animation-delay: 1s;
+            animation-delay: 1.6s;
+            width: 18px;
+            height: 18px;
         }
 
         .sparkle:nth-child(4) {
             top: 75%;
             left: 25%;
-            animation-delay: 1.5s;
+            animation-delay: 2.4s;
+            width: 24px;
+            height: 24px;
+        }
+
+        .sparkle:nth-child(5) {
+            top: 10%;
+            left: 60%;
+            animation-delay: 1.2s;
+            width: 14px;
+            height: 14px;
+        }
+
+        .sparkle:nth-child(6) {
+            top: 85%;
+            left: 70%;
+            animation-delay: 2s;
+            width: 20px;
+            height: 20px;
         }
 
         .menu-button-enhanced {
@@ -559,6 +585,8 @@
             <div class="sparkle"></div>
             <div class="sparkle"></div>
             <div class="sparkle"></div>
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
         </div>
 
         <!-- Navigation Dropdown - Right Side -->
@@ -586,17 +614,11 @@
 
         <div class="z-10 max-w-4xl mx-auto text-center">
             <!-- Portfolio Title -->
-            <img src="./assets/images/logo.png" alt="Logo" class="h-[110px] mx-auto mb-6 logo-glow" />
-
-            <!-- Subtitle -->
-            <p
-                class="text-[17.8px] md:text-[20px] text-mobile-subtitle subtitle-shine font-cotoris italic leading-relaxed mx-auto">
-                helping brands grow and connect with their public through strategic social media content
-            </p>
+            <img src="./assets/images/logo.png" alt="Logo" class="h-[140px] mx-auto mb-6 logo-glow" />
         </div>
 
         <!-- Gradient Overlay with Blur Effect -->
-        <div class="absolute inset-0 bg-[#000] bg-opacity-50"></div>
+        <div class="absolute inset-0 bg-[#000] bg-opacity-40"></div>
     </main>
 
     <!-- About Me Section -->
@@ -606,8 +628,7 @@
                 style="align-items: stretch;">
                 <!-- Image -->
                 <div class="relative h-[500px] mobile-about-image flex items-stretch">
-                    <img src="./assets/images/f41a6aaf28b3a22804c2fbef651599b0.jpg"
-                        alt="Professional woman in business attire"
+                    <img src="./assets/images/karol.jpg" alt="Professional woman in business attire"
                         class="w-full h-full rounded-xl object-cover object-top" style="height: 100%;" />
                 </div>
 
