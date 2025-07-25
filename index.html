@@ -131,6 +131,10 @@
 
         /* Mobile Responsive Styles */
         @media (max-width: 768px) {
+            .hero-background {
+                background-size: 250%;
+            }
+
             .hero-pattern {
                 background-size: 10px 10px;
                 background-position: 0 0, 0 5px, 5px -5px, -5px 0px;
@@ -699,10 +703,10 @@
     </style>
 </head>
 
-<body class="bg-gradient-custom hero-pattern h-[50vh] overflow-x-hidden">
+<body class="bg-gradient-custom hero-pattern h-[30vh] md:h-[50vh] overflow-x-hidden">
     <!-- Hero Section -->
     <main id="hero"
-        class="hero-background relative z-10 flex items-center justify-center h-[50vh] px-4 sm:px-6 lg:px-8 overflow-hidden">
+        class="hero-background relative z-10 flex items-center justify-center h-[30vh] md:h-[50vh] px-4 sm:px-6 lg:px-8 overflow-hidden">
 
         <div class="hero-enhanced">
             <!-- Sparkles -->
@@ -715,10 +719,10 @@
         </div>
 
         <!-- Navigation Dropdown - Right Side -->
-        <nav class="absolute right-6 top-[10%] transform -translate-y-1/2 z-50">
+        <nav class="absolute right-6 top-[15%] md:top-[10%] transform -translate-y-1/2 z-50">
             <div class="relative">
                 <button id="menu-button"
-                    class="menu-button-enhanced text-[#c09569] pa-4 font-cotoris flex items-center gap-2 transition-all duration-300 px-6 py-3">
+                    class="menu-button-enhanced text-[#c09569] pa-4 font-cotoris flex items-center gap-2 transition-all duration-300 px-2 md:px-6 md:py-3 roundend-[50%]">
                     <img src="./assets/images/menu.svg" alt="Menu Icon" class="w-6 h-6">
                 </button>
 
@@ -739,7 +743,7 @@
 
         <div class="z-10 max-w-4xl mx-auto text-center">
             <!-- Portfolio Title -->
-            <img src="./assets/images/logo.png" alt="Logo" class="h-[140px] mx-auto mb-6 logo-glow" />
+            <img src="./assets/images/logo.png" alt="Logo" class="h-[60px]  md:h-[140px] mx-auto logo-glow" />
         </div>
 
         <!-- Gradient Overlay with Blur Effect -->
@@ -1532,7 +1536,7 @@
     <section id="contact" class="bg-[#f0ede5] py-0 relative">
         <div class="h-screen grid lg:grid-cols-2 mobile-contact-grid gap-0">
             <!-- Left Side - Image/Photo -->
-            <div class="relative bg-[#f0ede5] mobile-contact-image flex items-center h-screen justify-center">
+            <div class="relative bg-[#f0ede5] mobile-contact-image hidden md:flex items-center h-screen justify-center">
                 <img src="./assets/images/short vid_desk.gif" class="contact-gif gif-loop max-w-full h-screen"
                     alt="Professional workspace animation" loading="lazy" decoding="async" />
             </div>
@@ -1540,7 +1544,7 @@
             <!-- Right Side - Contact Information -->
             <div class="relative bg-white mobile-contact-content flex flex-col">
                 <!-- Main Content Area -->
-                <div class="flex-1 flex flex-col justify-center px-16 lg:px-20">
+                <div class="flex-1 flex flex-col justify-center px-4 lg:px-20">
                     <!-- Title -->
                     <div class="mb-8">
                         <h2
@@ -1581,7 +1585,7 @@
                         </div>
 
                         <form id="contact-form" action="#" method="POST">
-                            <div class="flex flex-1 gap-2">
+                            <div class="flex flex-col md:flex-row flex-1 md:gap-2">
                                 <div class="form-group flex-1">
                                     <label for="name" class="form-label">
                                         Your Name<span class="required-star">*</span>
@@ -1599,7 +1603,7 @@
                                 </div>
                             </div>
 
-                            <div class="flex gap-2">
+                            <div class="flex flex-col md:flex-row md:gap-2">
                                 <div class="form-group flex-1">
                                     <label for="phone" class="form-label">
                                         Phone Number<span class="required-star">*</span>
@@ -1618,7 +1622,7 @@
                             </div>
 
 
-                            <div class="form-group text-end mb-0">
+                            <div class="form-group text-center md:text-end mb-0">
                                 <button type="submit" class="form-submit">
                                     Send Message
                                 </button>
